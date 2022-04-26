@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="icon" href="gearBestIcon.jpg" type="image/icon type" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gearbest Cart</title>
+    <link rel="icon" href="gearBestIcon.jpg" type="image/icon type" />
+    <style>
+        body {
+            margin: 0px;
+            font-family: OpenSans, Arial, Helvetica, sans-serif;
+            background-color: white;
+        }
+
+        .main_container {
+            width: 1200px;
+            margin: 0 auto;
+
+        }
+
+        .container_logo {
+            padding: 22.5px 0;
+        }
+
+        .container_logo img {
+            height: 45px;
+            width: 207px;
+        }
+
+        .container {
+            width: 99.95%;
+            margin: 0 auto;
+            background-color: #f2f2f2;
+            border: 1px solid #f2f2f2;
+            margin-bottom: 30px;
+        }
+
+        .container_cart {
+            width: 88.5%;
+            background-color: #f2f2f2;
+            margin: 0 auto;
+
+        }
+
+        .timeline {
+            width: 100%;
+            height: 170px;
+            border: 1px solid #f2f2f2;
+        }
+
+        .horizontal {
+            width: 83.333334%;
+            margin: 84px auto 64px;
+            background: #e0e0e0;
+            font-size: 0;
+            height: 4px;
+        }
+
+        .link-active {
+            background: #000;
+        }
+
+        ul {
+            padding: 0px;
+        }
+
+        .display_link_item {
+            position: relative;
+            display: inline-block;
+            width: 25%;
+            height: 4px;
+            border-radius: 2px;
+
+        }
+
+        .display_link_item p {
+            position: absolute;
+            top: -62px;
+            right: -50%;
+            width: 100%;
+            height: 56px;
+            line-height: 40px;
+            text-align: center;
+            color: #999;
+            font-size: 16px;
+        }
+
+        .link-active p {
+            color: #000;
+        }
+
+        .display_link_item p:after {
+            content: "";
+            display: block;
+            overflow: hidden;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #e0e0e0;
+            margin: auto;
+        }
+
+        .link-active p:after {
+            background: #000;
+        }
+
+        table,
+        thead {
+            width: 100%;
+            border: 0;
+            height: 50px;
+            padding: 0 19px;
+            background-color: white;
+            font-size: 14px;
+            color: #999;
+
+
+        }
+
+        table>thead>tr>td:nth-child(1) {
+            width: 519px;
+        }
+
+        table>thead>tr>td:nth-child(2) {
+            width: 179px;
+        }
+
+        table>thead>tr>td:nth-child(3) {
+            width: 159px;
+        }
+
+        table>thead>tr>td:nth-child(4) {
+            width: 200px;
+        }
+
+        table>thead>tr>td:nth-child(5) {
+            width: 100px;
+        }
+
+        .container_cart>div>img {
+            margin: 50px 43% 0px;
+            /* margin:auto; */
+        }
+
+        .container_cart>div>p {
+            /* padding: 16px 0; */
+            text-align: center;
+            font-size: 16px;
+            color: #999;
+        }
+
+        .container_cart>div:nth-child(5) {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .container_cart>div>button:nth-child(1) {
+            height: 40px;
+            padding: 0 30px;
+            line-height: 40px;
+            font-size: 16px;
+            border: 1px solid black;
+            font-weight: 700;
+            margin: 0px 10px 20px;
+
+        }
+
+        .container_cart>div>button:nth-child(1):hover {
+            cursor: pointer;
+            background-color: rgb(230, 230, 230);
+        }
+
+        .container_cart>div>button:nth-child(1)>a {
+            color: black;
+            text-decoration: none;
+
+        }
+
+        .container_cart>div>button:nth-child(2) {
+            height: 40px;
+            padding: 0 30px;
+            line-height: 40px;
+            font-size: 16px;
+            border: 1px solid black;
+            font-weight: 700;
+            margin: 0px 10px 20px;
+            border: 0;
+            background-color: #ffda00;
+        }
+
+        .container_cart>div>button:nth-child(2)>a {
+            color: black;
+            text-decoration: none;
+
+        }
+
+        .container_cart>div>button:nth-child(2):hover {
+            cursor: pointer;
+            background-color: #dbbd10;
+        }
+
+        .container_cart>div:nth-child(6)>h2 {
+            font-weight: 400;
+        }
+
+        tbody>tr>td:nth-child(1) {
+            display: flex;
+            overflow: hidden;
+        }
+
+        tbody>tr>td:nth-child(1)>div:nth-child(1) {
+            width: 100px;
+            height: 100px;
+            /* border: 1px solid red; */
+        }
+
+        tbody>tr>td:nth-child(1)>div:nth-child(1)>img {
+            width: 100px;
+            height: 100px;
+            margin: 0px 0px 10px 0px;
+            border: 1px solid rgb(209, 209, 209);
+
+        }
+
+        tbody>tr>td:nth-child(1)>div>p {
+            margin: 5px 60px 10px 10px;
+            overflow: hidden;
+            color: black;
+            line-height: 140%;
+        }
+
+        tbody>tr>td:nth-child(1)>div>:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        tbody>tr>td:nth-child(2)>p {
+            margin: 5px 0px 100px 5px;
+            color: black;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        tbody>tr>td:nth-child(3)>div {
+            margin: 5px 0px 100px 5px;
+            color: black;
+            font-weight: 700;
+            font-size: 18px;
+
+        }
+
+        tbody>tr>td:nth-child(3)>div {
+            display: flex;
+            width: 110px;
+            height: 30px;
+        }
+
+        tbody>tr>td:nth-child(3)>div>button {
+            height: 30px;
+            width: 30px;
+            border: 0.5px solid gray;
+            cursor: pointer;
+            font-size: 22px;
+            background-color: white;
+        }
+
+        tbody>tr>td:nth-child(3)>div>button:hover {
+            background-color: whitesmoke;
+        }
+
+        tbody>tr>td:nth-child(3)>div>p {
+            margin: 0 auto;
+            width: 50px;
+            height: 28px;
+            line-height: 30px;
+            font-size: 16px;
+            font-weight: 700;
+            text-align: center;
+            border: 0.5px solid gray;
+        }
+
+        .subtotal {
+            /* border: 1px solid red; */
+            padding: 0px 0px 100px 5px;
+        }
+
+        .subtotal>p {
+            color: black;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+
+
+        tbody>tr>td:nth-child(5)>button {
+            margin: 5px 0px 100px 5px;
+            color: black;
+            font-weight: 700;
+            font-size: 18px;
+            width: auto;
+            height: 30px;
+            background-color: #ffda00;
+            color: black;
+            border: 1px solid #ffda00;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        tbody>tr>td:nth-child(5)>button:hover {
+            border: 0.5px solid black;
+
+        }
+        .total_amount{
+            width: 100%;
+            height: 150px;
+            /* border: 1px solid red; */
+            background-color: white;
+            margin: 30px auto;
+        }
+        .total_amount>div:nth-child(1){
+            display: flex;
+        }
+        .total_amount>div:nth-child(1)>.left_side{
+            display: flex;
+        }
+        .total_amount>div:nth-child(1)>.left_side img{
+            width: 32px;
+            height: 32px;
+            margin: 20px 5px 5px 10px;
+        }
+        .total_amount>div:nth-child(1)>.left_side p{
+            margin: 20px 5px 5px 5px;
+            font-size: 13px;
+        }
+        .total_amount>div:nth-child(1)>.left_side span{
+            font-weight:900;
+        }
+        .total_amount>div:nth-child(1)>.left_side>div{
+            display: flex;
+        }
+        .total_amount>div:nth-child(1)>.right_side{
+            width: 200px;
+            display: flex;
+            align-items:center;
+            justify-content: space-between;
+            /* border: 1px solid red; */
+            margin: 0px auto;
+            margin-right: 20px;
+            
+        }
+
+        .total_amount>div:nth-child(1)>.right_side>div:nth-child(1)>p{
+            font-size: 18px;
+            font-weight: 900;
+        }
+        .total_amount>div:nth-child(1)>.right_side>div:nth-child(2)>p{
+            font-size: 18px;
+            font-weight: 700;
+            color: #f33a71;
+        }
+        .total_amount>div:nth-child(2)>button{
+            width: 140px;
+            height: 40px;
+            font-size: 16px;
+            font-weight: 700;
+            border:0;
+            background-color:#ffda00;
+            float: right;
+            margin: 30px 20px;
+        }
+        .total_amount>div:nth-child(2)>button:hover{
+            background-color: #cfb000;
+        }
+
+        /* slider part starts here */
+
+        .new_container {
+            flex-direction: column  ;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+  padding-top: 20px;
+  width: 1200px;
+  height: 342px;
+}
+
+.new_heading {
+  padding-top: 7px;
+  box-sizing: border-box;
+  height: 27px;
+  align-content: flex-end;
+  display: flex;
+  font-size: 20px;
+  margin-left: 5px;
+  margin-bottom: 15px;
+  color: #000;
+  font-weight: bold;
+}
+
+.new_heading::before {
+  color: #666;
+  margin-right: 10px;
+  content: "\ef01   ";
+  font-family: IcoFont;
+  font-size: 18px;
+}
+
+.new_items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+  height: 310px;
+  width: 1200px;
+}
+
+.new_items_big {
+  height: 300px;
+  width: 450px;
+}
+
+.new_items_small {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  border: 1px solid #eee;
+  transition: all 0.2s linear;
+  width: 161px;
+  height: 278px;
+  padding: 10px;
+  margin-left: 5px;
+}
+
+.new_items_small > img {
+  width: 161px;
+  height: 161px;
+}
+
+.new_items_prices {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  margin-top: 30px;
+  width: 161px;
+  height: 65px;
+}
+
+.new_items_small:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.new_items_strikedOffPrice {
+  text-decoration: line-through;
+  display: flex;
+  justify-content: center;
+  width: 161px;
+  height: 20px;
+  margin-top: 18px;
+  font-size: 14px;
+  color: #999;
+}
+
+.new_items_finalPrice {
+  display: flex;
+  justify-content: center;
+  width: 161px;
+  height: 20px;
+  margin-top: 5px;
+  font-size: 20px;
+  color: #f30240;
+}
+
+.new_items_big > img {
+  height: 100%;
+  width: 100%;
+}
+
+.new_items_slider {
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+
+ /************************** FOOTER STARTS HERE  ***************************/
+ #container_footer{
+            display: flex;
+            flex-direction: column;
+            width: 1200px;
+            height: 1150px;
+            /* border: 1px solid; */
+            margin: auto;
+        
+        }
+        #big{
+            width: 1200px;
+            height: 100%;
+            margin: auto;
+            /* border: 2px solid; */
+        }
+        #start{
+            width: 100%;
+            height: 80px;
+            /* border: 1px solid red; */
+            display: flex;
+        }
+        #search_footer{
+            width: 10%;
+            height: 100%;
+            font-family: sans-serif;  
+            /* border: 1px solid blueviolet; */
+            text-align: center;
+            margin-top: 20px;
+            
+        }
+        #search_list{
+            width:90%;
+            height: 100%;
+            font-family: sans-serif;
+            /* border: 1px solid blue; */
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #middle{
+            width: 100%;
+            height: 200px;
+            /* margin-top: 50px; */
+            /* border: 1px solid blue; */
+            margin-right:100px ;
+            margin-top: 100px;
+        }
+        #mid1{
+            
+            width: 100%;
+            height: 100%;
+            display: grid;
+            margin: auto;
+            display: flex;
+            text-align: center;
+        }
+        
+        #mid1>div{
+            width: 20%;
+            height: 100%;
+            /* border: 1px solid green; */
+        } 
+        #mid1>div>img{
+            width: 100%;
+            padding: 10px 0 0 ;
+
+        }
+        #middle2{
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100px;
+            margin-top: 30px;
+            display: flex;
+        }
+        .div1{
+            display: flex;
+            align-items: center;
+            width: 50%;
+            height: 100%;
+        }
+       .div2{
+            margin-left: 10%;
+           width:50%;
+           height:100%;
+           /* border: 2px solid; */
+       }
+       .social_icons{
+           display: flex;
+           width: 30%;
+           height:45%;
+           /* border: 1px solid red; */
+           margin: auto;
+           margin-top:53px;
+       }
+       .img_icons {
+           margin-left: 10px;
+       }
+
+        #bottom1{
+            width: 100%;
+            height: 400px;
+            margin-top: 40px;
+            /* border: 1px solid purple; */
+            display: flex;
+        }
+        #bottom2{
+            width: 100%;
+            height: 100px;
+            /* border: 1px solid red; */
+            display: flex;
+            padding-top: 80px;
+            gap: 20px;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        #border_base {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            margin: auto;
+            margin-top: 10px;
+            width: 1200px;
+            height: 50px;
+            padding-top: 10px;
+            /* border: 3px solid red; */
+            background-color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+
+        .p_footer {
+            padding: none;
+            margin-top: -10px;
+            margin-left: 50px;
+            width: 140px;
+            font-family: sans-serif;
+            color: gray;
+            font-size: 12px;
+        }
+
+        h4{
+            font-family: sans-serif;
+        }
+        h4:hover{
+            color: rgb(245, 230, 23);
+            cursor: hand;
+        }
+        h5{
+            text-align: center;
+            margin-top: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .newsletter{
+            display: flex;
+            margin: 50px auto;
+            justify-content: space-between;
+            height: 50%;
+            font-family: sans-serif;  
+        }
+
+        .div2 > img {
+            margin-top: 20px;
+        } 
+        .input_footer{
+            width: 350px;
+            height: 90%;
+            font-family: sans-serif;
+            margin-left: 15px;
+            border: 1px solid;      
+        }
+        .button_footer{
+            width: 25%;
+            height: 100%;
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            border: 1px solid black;
+           
+        }
+        button:hover{
+            background-color: rgb(138, 133, 133);
+            cursor: pointer;
+        }
+        .icon-fb:before{
+            content:"\E676";
+        }
+        #img{
+            margin: 30px 0 0 15px;
+        }
+        .list_footer{
+            font-size: 12px;
+            color: #666666;
+            width: 25%;
+            height: 100%;
+            /* border: 1px solid dodgerblue; */
+        } 
+        #info>h3{
+            font-size: 14px;
+            margin-left: 15px;
+        }
+        
+        #service>h3{
+            font-size: 14px;
+             margin-left: 15px;
+        }
+        #other>h3{
+            font-size: 14px;
+            margin-left: 15px;
+        }
+        .qrscanner>img{
+            margin-left: -15px;
+            justify-content: left;
+            display: flex;
+        }
+
+        #download_app {
+            margin-left: -20px;
+        }
+
+        .footer_h4_title {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .footer_h5_title {
+            margin-top: 10px;
+            margin-left: 40px;
+            font-family: sans-serif;
+            color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <link rel="stylesheet" href="icofont.min.css" />
+    <div class="main_container">
+
+        <div class="container_logo">
+            
+                <img src="https://uidesign.gbtcdn.com/GB/images/promotion/2019/a_evan/Gearbest/logo_gearbest.png?imbypass=true"
+                    alt="Gearbest">
+           
+
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <div class="container_cart">
+            <div class="timeline">
+                <ul class="horizontal">
+                    <li class="display_link_item link-active">
+                        <p>Cart</p>
+                    </li>
+                    <li class="display_link_item ">
+                        <p>Place Order</p>
+                    </li>
+                    <li class="display_link_item">
+                        <p>Payment</p>
+                    </li>
+                    <li class="display_link_item"></li>
+                </ul>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <td>Selected Item(s)</td>
+                        <td>Unit Price</td>
+                        <td>Quantity</td>
+                        <td>Subtotal</td>
+                        <td>Operation</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr>
+                        <td><div><img src="https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Electronic/2021/03/17/goods_thumb_220-v1/20210317121546_6051827230125.jpg" alt=""></div>
+                        <div><p>Gocomma 990 Miles HD Digital HDTV TV Antenna with Amplifier DVB-T2 Mini 4K Indoor Satellite Antenna - Black</p></div></td>
+                        <td class="unitPrice"><p>9</p></td>
+                        <td>
+                            <div>
+                            <button onclick="decreament()" class="counter-minus">-</button>
+                            <p class="counter-display"></p>
+                            <button onclick="increament()" class="counter-plus">+</button>
+                           </div>
+                        </td>
+
+                        <td class="subtotal"><p></p></td>
+                        <td><button>delete</button></td>
+                    </tr> -->
+
+                    <!-- <tr>
+                        <td><div><img src="https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Electronic/2021/03/17/goods_thumb_220-v1/20210317121546_6051827230125.jpg" alt=""></div>
+                        <div><p>Gocomma 990 Miles HD Digital HDTV TV Antenna with Amplifier DVB-T2 Mini 4K Indoor Satellite Antenna - Black</p></div></td>
+                        <td class="unitPrice"><p>9</p></td>
+                        <td>
+                            <div>
+                            <button onclick="decreament()" class="counter-minus">-</button>
+                            <p class="counter-display"></p>
+                            <button onclick="increament()" class="counter-plus">+</button>
+                           </div>
+                        </td>
+
+                        <td class="subtotal"><p></p></td>
+                        <td><button>delete</button></td>
+                    </tr> -->
+
+                </tbody>
+
+            </table>
+
+            <div> <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI8AAABkCAMAAACIPpPgAAAAM1BMVEUAAADMzMz9/f3Pz8/h4eHy8vLr6+v29vbW1tba2trS0tLd3d3n5+ft7e35+fnV1dXk5ORlTx/JAAAAAXRSTlMAQObYZgAAA3JJREFUaN7tmg1v3CAMhnltHMx3/v+vXdOszbbLtguQHZr6qLqqlY5SfI8xMeYcx/gkRDGvxjF+xJqJKImRzEwIM5mZWCdbIAc1UxEwV8AsspkJmUt5QwhmKjycmYkEtSNYaJTxg+BllPHLAJIH8iDjZVDgw5CQZaxmCBUyxngdlVoXMwJFGRSwNGicZar1cYiDMqsMMn5IUUbMZCYyXuDfXucx3r5/nOcxvl7fmLMlsXRmfH/kC7hhq3pD7jE+X7ZULKABmumvxhevTyBd2YeAUAxZIP3VeMEzrD+vvWvKn8RMfzfePQOZA3e97k37Hw2BbjA+wV4VgBH3UKQbjPeXqzGyirgkhpfxxhOjtLzpjXy+3Llzs6jmOqrZsjsfL5oe1rZjJb193bI5K8QMJXYNSACZoWSknncffk6xx9ve/PWc8VLDD1T3h41azGBW5JMw/IT8vgI/bLj1QVB52K5OSX2l6nDjPZIZToRr/lfOQkl7nSXFtLEgNYf6ZGlJOdLbqBxcawGszbbHk+nEop5ScIml3fgWHD+qSdWSIR+2xckszcZfh3KAPv52eX9N5T2e8o8e/ZIkz0At5g6Ig3mekq1ig48T3auMd4sN2OCYpGc2/caTpMjYqHZpMHmk8SSrMjZ0zWTup4L+8HGpTSEa3+whl2LoDlG/8YfRG2r7QtRv/GG07wtRv/GH0aEzRP3GH0arzcW8FIeg/BGiGRqrFUCIi7tvLkTfvz97cLk3RKXqXjaypQnauy5oqGWbjudIV42/YzpUai0ZloQ9vbi963gLFmmA/fipo2nUT95DRDHt09PydaHj/7vQEc1MEPiVAaPFxh/xnqH+eeIqQw1kdBNpYH0BXSQpsMplAtjmvDLqqAkVYD/XWgRquB/h9h0SdpTbnyPp5Y4cfT4zdACNyn2uubvnjg5BHJWyADpGb+hPjr7EyJ/zEWh7u91iMUPwWI5+SHPepMenzy5Kaphj/tDK8fWyJ8J+iFYf3UPT7SRFEDKUuUFZx4juPVf8ujykiLJww4UyUoArt+VYYSDUkw4faaC9XXsZShWAtvlaLAMcHyNttwDmxsqXOg5bVAqddsOyIZ3nJmqxCMxTHHB3hJNOVdaRoXlW54sv/i2W78B2FBp34E0zNJ6vhPN/obgDa0wJ2Fj2iuxJ9Pb5pGvz+QYgOSIxOKrHfgAAAABJRU5ErkJggg=="
+                    alt=""></div>
+
+            <div>
+                <p>
+                    There are no items in the shopping cart, and you will see the items you added before logging in
+                </p>
+            </div>
+            <div>
+                <button><a href="login.html">Sign In</a> </button>
+                <button><a href="home_page.html">Go Shopping</a></button>
+            </div>
+
+            <div class="total_amount">
+
+              <div>
+                <div class="left_side">
+                    <div><img src="https://css.gbtcdn.com/imagecache/gbw/img/site/money_back@.png" alt=""><p><span>45 days</span> <br> Money Back Guarantee</p></div>
+                    <div><img src="https://css.gbtcdn.com/imagecache/gbw/img/site/repair@.png" alt=""><p><span>360 days</span> <br>
+                    Free Repair Warranty</p></div>
+                </div>
+                <div class="right_side">
+                    <div><p>Total</p></div>
+                    <div><p>123</p></div>
+                </div>
+              </div>
+                <div><button onclick="goAddress()">Check Out</button></div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <!-- ADDING THE SLIDER -->
+    <div class="new_container">
+        <div class="new_heading">You Might Also Like</div>
+        <div class="new_items">
+
+    
+          
+          <div class="new_items_big"><img src="New Items big\Screenshot (26).png" alt=""></div>
+          <div class="new_items_small"><img src="https://gloimg.gbtcdn.com/soa/gb/store/6878025592978206720/16418/goods_thumb_220-v1/69e0e12d3c8f.jpg" alt=""><div class="new_items_prices"><div class="new_items_strikedOffPrice">$184.43</div><div class="new_items_finalPrice">$165.99</div></div></div>
+
+         <div class="new_items_small"><img src="https://gloimg.gbtcdn.com/soa/gb/item/6878030991047454720/16419/goods_thumb_220-v1/2701297bc845.jpg" alt=""><div class="new_items_prices"><div class="new_items_strikedOffPrice">$167.57</div><div class="new_items_finalPrice">$124.99</div></div></div>
+
+         <div class="new_items_small"><img src="https://gloimg.gbtcdn.com/soa/gb/item/6878402251153666048/16415/goods_thumb_220-v1/30a7d534de22.jpg" alt=""><div class="new_items_prices"><div class="new_items_strikedOffPrice">$96.00</div><div class="new_items_finalPrice">$40.99</div></div></div>
+
+          <div class="new_items_small"><img src="https://gloimg.gbtcdn.com/soa/gb/item/6878030535709618176/16417/goods_thumb_220-v1/7b720a2fc06a.jpg" alt=""><div class="new_items_prices"><div class="new_items_strikedOffPrice">$15.89</div><div class="new_items_finalPrice">$10.68</div></div></div>
+
+
+
+
+          <div class="new_items_big"><img src="New Items big\Screenshot (27).png" alt=""></div>
+          <div class="new_items_small"><img src="https://gloimg.gbtcdn.com/soa/gb/item/6878030991047454720/16421/goods_thumb_220-v1/3a223c096ec0.jpg" alt=""><div class="new_items_prices"><div class="new_items_strikedOffPrice">$149.99</div><div class="new_items_finalPrice">$49.99</div></div></div>
+
+         <div class="new_items_small"><img src="https://gloimg.gbtcdn.com/soa/gb/item/6878030991047454720/16419/goods_thumb_220-v1/b87d606f62d0.jpg" alt=""><div class="new_items_prices"><div class="new_items_strikedOffPrice">$197.57</div><div class="new_items_finalPrice">$169.99</div></div></div>
+
+         <div class="new_items_small"><img src="https://gloimg.gbtcdn.com/soa/gb/item/6878400698325856256/16415/goods_thumb_220-v1/cbf2c90f9582.jpg" alt=""><div class="new_items_prices"><div class="new_items_strikedOffPrice">$27.49</div><div class="new_items_finalPrice">$21.99</div></div></div>
+
+          <div class="new_items_small"><img src="https://gloimg.gbtcdn.com/soa/gb/item/6878027957345120256/16418/goods_thumb_220-v1/99a884ec5807.jpg" alt=""><div class="new_items_prices"><div class="new_items_strikedOffPrice">$45.89</div><div class="new_items_finalPrice">$39.99</div></div></div>
+
+          
+
+          <div class="new_items_big"><img src="New Items big\Screenshot (28).png" alt=""></div>
+          <div class="new_items_small"><img src="https://gloimg.gbtcdn.com/soa/gb/item/6878027957345120256/16416/goods_thumb_220-v1/d1d305d1fd69.jpg" alt=""><div class="new_items_prices"><div class="new_items_strikedOffPrice">$84.43</div><div class="new_items_finalPrice">$21.99</div></div></div>
+
+         <div class="new_items_small"><img src="https://gloimg.gbtcdn.com/soa/gb/item/6878030535709618176/16417/goods_thumb_220-v1/621aaf409ce1.jpg" alt=""><div class="new_items_prices"><div class="new_items_strikedOffPrice">$107.57</div><div class="new_items_finalPrice">$54.99</div></div></div>
+
+         <div class="new_items_small"><img src="https://gloimg.gbtcdn.com/soa/gb/store/6866325577285169152/16420/goods_thumb_220-v1/e5643e92836f.jpg" alt=""><div class="new_items_prices"><div class="new_items_strikedOffPrice">$24.84</div><div class="new_items_finalPrice">$19.87</div></div></div>
+
+          <div class="new_items_small"><img src="https://gloimg.gbtcdn.com/soa/gb/store/6866325577285169152/16420/goods_thumb_220-v1/03f93622bf20.jpg" alt=""><div class="new_items_prices"><div class="new_items_strikedOffPrice">$34.32</div><div class="new_items_finalPrice">$27.46</div></div></div>
+        
+          
+      
+        </div>
+      </div>
+
+       <!--  -->
+    <div id="container_footer">
+        <div id="big">
+         <div id="start"> 
+        </div>
+        <div id="middle">
+            <div id="mid1">
+                <div>
+                    <img class="img_icons"src="https://css.gbtcdn.com/imagecache/gbw/img/site/new-logo.png" alt="logo">
+                    <h5 class="footer_h5_title">AFFORDABLE QUALITY FUN SHOPPING</h5>
+                </div>
+                <div>
+                    <img class="img_icons"style="width: 50px; height: 50px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAyCAMAAADGIxO9AAABAlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADg4OAAAAAAAAAAAAAAAAAAAAAAAADg4OAAAAAAAAAAAAAAAAAAAADg4OAAAADg4OAAAAAAAAAAAAAAAAAAAADk5OQAAAAAAADo6Oj///8AAADg4OAlJSUAAADg4OAaGhrg4ODg4ODg4OAAAADg4ODg4OAAAADh4eEAAADh4eHh4eHk5OQAAAAAAAAAAADg4OA4ODgeHh7Nzc0oKCgQEBAJCQnb29vExMSamppLS0sTExO/v7+zs7OoqKigoKB9fX1wcHBaWloYGBg9pae4AAAAQXRSTlMAgECHYZ94/h7swLwEAblL9/Hfx8e0r6eOfGNZVDcsE/TPe3drUkg8KSYZCwXt6+bm39nTu6ecmo2ETEc8MxMLCQmnFe4AAAFdSURBVEjH7ZTXbsIwFIbtAiUkJOxd9i50793/hLaU7vX+r1IzokCx1WukfBeRfXQ++eiPbObhsYRZXJPRvmVqcpBjqJVwCAq6SmcD2NL3bfsFA/EZ2vaPWOzocSCrdCygzg7ocYgR0QPu6AP3VOm1gVhYoWhBBMtXRE+ic+oI+5XyLA4UFI4PSLMTom98zRx6xiclWB0w1AlEehVxzmBEon182PvgjahTFgNoqgR2zTwtc8pSgE/qGABnCYmz3W8CIVORwCY7kjiJ/mRseQKWs87v0ZjDS6eQBVLyBJrutlOrnV+72y7EELIEgmd8QsutmgU+JQbkJAm4ZJxgS0m4xJdSiGGOoOUXV6CRxALlv06RcwPQxRhpzJOZVqqcR5iE9dmfKx1HHaM6afQDASZQO4KbCx7QdStXZIL/nUU8Z8UdP5DkMlLqR1GLQkmLKSgopQxTovm5jEaJeawOv0IPd8P/1V/7AAAAAElFTkSuQmCC" alt="">
+                    <h4 class="footer_h4_title">High Quality Selection</h4>
+                    <p class="p_footer">Total product quality control for peace of mind</p>
+                </div>
+                <div>
+                    <img class="img_icons"style="width: 50px;height: 50px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAABIFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADi4uIAAAAAAAAAAAAAAAAAAAAAAADg4OAAAAAAAADh4eEAAAAAAADg4ODg4OAAAAAAAAAAAAAAAAAAAADg4OAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADi4uLf39/f399paWkAAADg4OAAAAAAAADg4OAAAAA7OzsAAADg4OCZmZng4OAUFBQAAAAAAADg4ODg4OAAAADa2toAAAAAAAAAAADk5OQAAADg4OBwcHDExMRPT0+lpaWVlZWLi4s4ODgxMTElJSUJCQkHBwfY2NjLy8u+vr6xsbFbW1s8PDwYGBgODg61tbWpqamDg4NtbW1paWlKSkpISEhFRUUimxvjAAAAQ3RSTlMAgPbwl1/8tqJxQC8fGATi0cTAZ1Q7EAr37uvf2dWrqZyGeXRqSjkxJx758O/o383Jx7Csp6SjjYyMeGpTT0Q0KRoTY8WDigAAAZ5JREFUSMft1NdOG0EUgOHj8a4LMe4loYYO6b33f1gTNwgESM/7v0V2BjsGYTPDHUj8N3u00qcj7YxWrrpUTYaVtXOB3FwKKFT9xWqSo5Z8RX4aVJA2bsKTLMN0LpZPYNaT3ISKxDUUfPAjJVi1Qxre+pECRLpcs+uyfkcCPa31rZokIOFF5uCvjisbsugB6gHwTZs2MvS7m/k4XoQK+KpttRL/U+E4sc5Q6HeKQWNONVvIShaKz3S/a8M7NwPFESSFkgQ81oM2jn3FJLw/TQBDNgciYs88bs+bbRkIXST6fcjhny9mvBGbBXjlIh3oQtPOZbul4iLbEHU50HaNyAysuchBPLVaW3a+LnVQ4iK/gM6utj2UFSg5yc4+sP3Zzs/N+5cOYvrRi439ZG8kDVUnabbbe4Bd80mSkHOSLuz0jsg9WYcpcW+BFhDF41MJ4ZGb7HYAfprxtQSw6CC2LZrf+zf6Pkz4EL0/OMjJFKmGmwybz6fhgZxB2psnu/NiduyfVqGkyugWZGRBMpB8kRFNLcsZ1ROnWlppyFUXv3/1lqnU6lgCKQAAAABJRU5ErkJggg==" alt="">
+                    <h4 class="footer_h4_title">Affordable Price</h4>
+                    <p class="p_footer">Factory direct prices for maximum savings</p>
+                </div>
+                <div>
+                    <img class="img_icons"style="width: 50px; height: 50px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAA0lBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEAAAAAAAAAAAAAAAAAAAAtLS0AAAAAAAAAAAAAAAAAAAAAAADf398AAAAAAADg4OAAAAAAAADg4OAAAAAAAADg4ODf39/g4OArKysAAAAdHR0AAAAAAADi4uIAAADf398AAADm5uYAAAAAAADg4OD///9OTk5wcHDX19f+/v5qamr5+fmMjIwkJCQcHBwBAQHa2tpWVlZBQUEWFhbq6urBwcG5ubmnp6eWlpZSUlI4ODgqKiofnaNsAAAALXRSTlMA6vqngF3z8JhyPhMF5bagXtnAhGlEQDco6m78887KvKiioJ2UjFY0LxgYFAh5lWYlAAABTUlEQVRIx+2U126DQBBFFwwu2CbuJb33awhg4pJe/v+XwoiNsoJJBEiRXzgPPNyrsyM0sKKkpCDXtgYWzW7yRrONX2nzTgV/UGEVDRgLljHQZgsAvMFXxZWD3VmC6dFVXPV6Pfvs/DalzBgOqfqme5lFmaoK9GFS4Ygry7KGgz3aUGZFEC0bGGRWRqPRxQ1tqJJVoertHhFaHiUyiDwKYv51Cr1LboXYoLIK3Y/1S0qRGaeEjyDeV4piQmZJRQe8WQCJ+6P0lUwqjSpQbYgu8LBG9HgNF9TfSU7UDNBJqcWfTl0e5TvO3IUknXWVKc19EJ4T4UFFzXZMoTJsAEufan8JHG9FnBqGmhmDiUhQkyc+AzU+k9R1EHqdbkx37jhPn8qvxGWiihhNTCJ5EQS0G0uWXKZOEduQ9IWEz1Q6Gmheh894WqZhmC02KynIF2/ZrSepltS8AAAAAElFTkSuQmCC" alt="">
+                    <h4 class="footer_h4_title">Express Shipping</h4>
+                    <p class="p_footer">Fast, reliable delivery from global warehouse</p>
+                </div>
+                <div>
+                    <img class="img_icons"style="width:50px; height: 50px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAA0lBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEAAAAAAAAAAAAAAAAAAAAtLS0AAAAAAAAAAAAAAAAAAAAAAADf398AAAAAAADg4OAAAAAAAADg4OAAAAAAAADg4ODf39/g4OArKysAAAAdHR0AAAAAAADi4uIAAADf398AAADm5uYAAAAAAADg4OD///9OTk5wcHDX19f+/v5qamr5+fmMjIwkJCQcHBwBAQHa2tpWVlZBQUEWFhbq6urBwcG5ubmnp6eWlpZSUlI4ODgqKiofnaNsAAAALXRSTlMA6vqngF3z8JhyPhMF5bagXtnAhGlEQDco6m78887KvKiioJ2UjFY0LxgYFAh5lWYlAAABTUlEQVRIx+2U126DQBBFFwwu2CbuJb33awhg4pJe/v+XwoiNsoJJBEiRXzgPPNyrsyM0sKKkpCDXtgYWzW7yRrONX2nzTgV/UGEVDRgLljHQZgsAvMFXxZWD3VmC6dFVXPV6Pfvs/DalzBgOqfqme5lFmaoK9GFS4Ygry7KGgz3aUGZFEC0bGGRWRqPRxQ1tqJJVoertHhFaHiUyiDwKYv51Cr1LboXYoLIK3Y/1S0qRGaeEjyDeV4piQmZJRQe8WQCJ+6P0lUwqjSpQbYgu8LBG9HgNF9TfSU7UDNBJqcWfTl0e5TvO3IUknXWVKc19EJ4T4UFFzXZMoTJsAEufan8JHG9FnBqGmhmDiUhQkyc+AzU+k9R1EHqdbkx37jhPn8qvxGWiihhNTCJ5EQS0G0uWXKZOEduQ9IWEz1Q6Gmheh894WqZhmC02KynIF2/ZrSepltS8AAAAAElFTkSuQmCC" alt="">
+                    <h4 class="footer_h4_title">Worry-free After-sales</h4>
+                    <p class="p_footer">Instant access to professional support</p>
+                </div>
+            </div>
+        </div>
+            <div id="middle2">
+                <div class="div1">
+                  <div class="newsletter">
+                      <h4 style="color: gray;">Newsletter</h4>
+                      <input class="input_footer" type="text" name="E-mail" placeholder="Enter Email  to get 50 points">
+                      <button class="button_footer">Subscribe</button>
+                  </div>
+                </div>
+                <div class="div2">
+                    <img src="New Items big/social_icons.png" alt="">
+                </div>
+            </div>
+            <div id="bottom1">
+                <div class="list_footer">
+                    <div id="info">
+                        <h3>Company Information</h3>
+                        <p style="margin-left: 15px;">About Us</p>
+                        <p style="margin-left: 15px;">Top Searches</p>
+                        <p style="margin-left: 15px;">Privacy Policy</p>
+                        <p style="margin-left: 15px;">Terms and Conditions</p>
+                        <p style="margin-left: 15px;">Intellectual Property Policy</p>
+                        <p style="margin-left: 15px;">Testimonials</p>
+                        <p style="margin-left: 15px;">Contact Us</p>
+                        <p style="margin-left: 15px;">Report Security Issue</p>
+                        <p style="margin-left: 15px;">Sell on Gearbest</p>
+                        <p style="margin-left: 15px;">Cookies Policy</p>
+                        <p style="margin-left: 15px;">Top Brands</p>
+                        <p style="margin-left: 15px;">Gearbest Official Blog</p>
+                    </div>
+                </div>
+                <div class="list_footer">
+                    <div id="service">
+                        <h3>Customer Service</h3>
+                        <p style="margin-left: 15px;">Shipping Information</p>
+                        <p style="margin-left: 15px;">My Favorites</p>
+                        <p style="margin-left: 15px;">My Favorites</p>
+                        <p style="margin-left: 15px;">FAQ For Newsletter Subscription</p>
+                        <p style="margin-left: 15px;">My Points</p>
+                        <p style="margin-left: 15px;">Warranty and Return</p>
+                        <p style="margin-left: 15px;">Payment Methods</p>
+                        <p style="margin-left: 15px;">Deposit Expansion</p>
+                        <p style="margin-left: 15px;">FAQ & Support</p>
+                        <p style="margin-left: 15px;">Sitemap</p>
+                        <p style="margin-left: 15px;">Gearbest Wallet Instruction</p>
+                        <p style="margin-left: 15px;">FAQs about COVID-19</p>
+                    </div>
+                </div>
+                <div class="list_footer">
+                    <div id="other">
+                        <h3>Other Business</h3>
+                        <p style="margin-left: 15px;">Partnership Programs</p>
+                        <p style="margin-left: 15px;">Associate Program</p>
+                    </div>
+                </div>
+                <div class="list_footer">
+                    <div id="download_app">
+                        <h3>Download App!</h3>
+                        <span>Save $3 with App & New Users Only</span> 
+                        <div class="qrscanner">
+                            <img src="New Items big\Gearbest_App_QRCODE.png" alt="" class="src">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="bottom2">
+                <img src="New Items big/partners.png" alt="" class="src">
+            </div>
+        </div>
+    </div>
+    <div id="border_base">
+        <h5>Copyright © 2014-2021 Gearbest.com. All Rights Reserved.</h5>
+    </div>
+    <!--  -->
+      <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+
+    
+     </body>
+</html>
+
+<script>
+
+document.querySelector(".container_logo").addEventListener('click', function() {
+   window.location.href = "home_page.html"
+  }) 
+
+  document.querySelector(".container_logo").addEventListener('mouseover', function() {
+    document.querySelector(".container_logo > img").style.cursor = "pointer";
+  })
+
+$('.new_items').slick({
+  infinite: true,
+  slidesToShow: 5,
+  slidesToScroll: 5,
+  variableWidth: true,
+  arrows: true,
+  autoplay: true
+});
+    //SIGN IN CHECK
+    let registeredUsers = JSON.parse(localStorage.getItem('userDataBase')) || [];
+
+    let [isSignedIn, indexOfUserSignedIn] = JSON.parse(localStorage.getItem("loggedInUser")) || [false, -1];
+    let signedInUserEmail = null;
+    let userCart = null;
+    let userFavorites = null;
+
+    console.log(registeredUsers[indexOfUserSignedIn])
+
+    if (isSignedIn) {
+        userCart = registeredUsers[indexOfUserSignedIn].userCart;
+        userCart.map(display);
+        document.querySelector(".container_cart >div>img").src ="";
+            document.querySelector(".container_cart >div>p").textContent =""
+            document.querySelector(".container_cart >div>button:nth-child(1)").style = "display:none";
+            document.querySelector(".container_cart >div>button:nth-child(2)").style = "display:none";
+    }
+
+    //MAPPING THE CART
+    let totalCostDisplay = document.querySelector(".total_amount>div:nth-child(1)>.right_side>div:nth-child(2)>p");
+    
+    function subtotalCalculator() {
+        
+        totalCostDisplay.innerHTML = "";
+        let sum = 0;
+        for(let i = 0; i < userCart.length; i++) {
+            let num  = Number(document.querySelectorAll(".cartSubTotal")[i].textContent.slice(1))
+            sum += num;
+        }
+        totalCostDisplay.textContent = `$${sum.toFixed(2)}`;
+    }
+
+    function display(data, index) {
+
+
+        let tr = document.createElement("tr");
+        var td1 = document.createElement("td");
+
+        var divv = document.createElement("div");
+
+        var img = document.createElement("img");
+        img.setAttribute("src", data.img);
+
+        divv.append(img)
+
+        var div = document.createElement("div");
+        var p = document.createElement("p");
+        p.textContent = data.name;
+
+        div.append(p)
+
+        td1.append(divv, div);
+
+        var td2 = document.createElement("td");
+        td2.setAttribute("class", "unitPrice");
+
+        var p1 = document.createElement("p");
+        p1.textContent = `$${data.price}`;
+
+        td2.append(p1);
+
+        //decrement button
+        var td3 = document.createElement("td");
+        var div1 = document.createElement("div");
+        var btn1 = document.createElement("button");
+        btn1.setAttribute("class", "counter-minus");
+        
+
+        btn1.textContent = "-";
+
+        var p2 = document.createElement("p");
+        p2.setAttribute("class", "counter-display");
+        p2.textContent = "1";
+
+        var btn2 = document.createElement("button");
+        btn2.setAttribute("class", "counter-plus");
+       
+        btn2.textContent = "+";
+
+
+        div1.append(btn1, p2, btn2);
+
+        td3.append(div1);
+
+        var td4 = document.createElement("td");
+        td4.setAttribute("class", "subtotal");
+        var p3 = document.createElement("p");
+        p3.setAttribute("class", "cartSubTotal");
+        p3.textContent = `$${data.price}`;
+        td4.append(p3);
+
+        var td5 = document.createElement("td");
+        var btn3 = document.createElement("button");
+        btn3.textContent = "delete";
+        btn3.addEventListener('click', function() {
+            document.querySelector("tbody").innerHTML = "";
+            userCart.splice(index, 1);
+            registeredUsers[indexOfUserSignedIn].userCart = userCart;
+            localStorage.setItem("userDataBase", JSON.stringify(registeredUsers));
+            
+            userCart.map(display)
+            subtotalCalculator();
+        })
+
+        td5.append(btn3);
+
+        //Decrement button function
+        btn1.addEventListener("click", function() {
+            if(Number(p2.textContent) == 1) {
+                return console.log("NOTHING CAN HAPPEN")
+            } else {
+                p2.textContent = +p2.textContent - 1;
+                p3.textContent =  "$"+(+data.price * +p2.textContent);
+                subtotalCalculator();
+            }
+
+            
+        });
+
+        //Increment Button function
+        btn2.addEventListener("click", function() {
+            p2.textContent = +p2.textContent + 1;
+            p3.textContent = "$"+(+data.price * +p2.textContent);
+            subtotalCalculator();
+        });
+
+        tr.append(td1, td2, td3, td4, td5);
+        document.querySelector("tbody").append(tr)
+    }
+
+    if(isSignedIn) {
+    subtotalCalculator()
+    }
+
+    // var res= userCart.reduce(totalPrice,0)
+
+    // function totalPrice(ac,cv){
+    //     return ac+Number(cv.price)
+
+       
+    // }
+    // console.log(res)
+
+
+
+    function goAddress(){
+        if(!userCart.length) {
+            return alert("There are no items in the cart! Please add something to proceed.")
+        }
+        localStorage.setItem("cartTotal", totalCostDisplay.textContent);
+        window.location.href="checkout.html"
+    }
+</script>

@@ -1,0 +1,1965 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="gearBestIcon.jpg" type="image/icon type" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Oswald:wght@300..700&display=swap"
+        rel="stylesheet">
+
+
+    <title>Men's Fashion - Best Men's Fashion Online shopping | Gearbest.com</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        #nav_bar {
+            display: flex;
+            margin: auto;
+            width: 1200px;
+            height: 100px;
+        }
+
+        .gearBestLogo {
+            cursor: pointer;
+        }
+
+
+        #nav_top {
+            align-items: center;
+            justify-content: right;
+            display: flex;
+            margin: none;
+            padding-top: 10px;
+            height: 26px;
+            width: 970px;
+            font-size: 13px;
+        }
+
+        #nav_top ul li:nth-child(1):before {
+            font-family: IcoFont;
+            font-size: 18px;
+            content: "\efec";
+        }
+
+        #nav_top ul li:nth-child(1)::after,
+        #nav_top ul li:nth-child(3)::after,
+        #nav_top ul li:nth-child(4)::after,
+        #nav_top ul li:nth-child(5)::after,
+        .nav_search_category_select::after {
+            margin-left: 4px;
+            font-family: IcoFont;
+            content: "\ea99";
+            font-size: 16px;
+        }
+
+        #nav_top ul li:nth-child(1):hover:after,
+        #nav_top ul li:nth-child(5):hover:after {
+            font-family: IcoFont;
+            content: "\eaa1";
+            font-size: 16px;
+        }
+
+        #nav_top ul {
+            display: flex;
+            list-style-type: none;
+            color: #666;
+        }
+
+        #nav_top ul li {
+            align-items: center;
+            display: flex;
+            text-align: left;
+            margin-left: 30px;
+            cursor: pointer;
+        }
+
+        #nav_top ul li:hover {
+            text-decoration: underline;
+        }
+
+        .dropdown_app_QR {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown_app_qr_content {
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            margin-top: 250px;
+            display: none;
+            position: absolute;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown_app_qr_content>img {
+            display: block;
+        }
+
+        .dropdown_app_QR:hover .dropdown_app_qr_content {
+            display: block;
+        }
+
+        #nav_main {
+            display: flex;
+            flex-direction: row;
+            margin: none;
+            padding: 14px 0px 0px 0px;
+            height: 50px;
+            width: 970px;
+        }
+
+        .nav_search_bar {
+            display: flex;
+            font-size: 14px;
+            margin-left: 150px;
+            height: 32px;
+            border: 2px solid #ffda00;
+            border-radius: 100px;
+            text-align: left;
+            width: 480px;
+        }
+
+        .nav_search_category_select {
+            margin: 0px 10px 0px 10px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        #nav_search_input {
+            border: none;
+            margin-right: 60px;
+            width: 356px;
+            height: 26px;
+            padding: 3px 0px;
+        }
+
+        .nav_search_button {
+            border-radius: 0px 10px 10px 0px;
+            align-self: right;
+            cursor: pointer;
+            width: 42px;
+            border: 0;
+            background-color: #ffda00;
+        }
+
+        .nav_search_button:before {
+            font-family: IcoFont;
+            font-size: 18px;
+            content: "\ed11";
+        }
+
+        .nav_bar_options {
+            margin-top: 5px;
+            color: #666;
+            justify-content: right;
+            align-items: center;
+            display: flex;
+            font-size: 15px;
+            width: 319px;
+            height: 28px;
+        }
+
+        .nav_bar_options>div {
+            margin-left: 30px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav_sign_in {
+            text-align: left;
+        }
+
+        .nav_sign_in:before {
+            margin-right: 5px;
+            font-size: 22px;
+            content: "\ecec    ";
+            font-family: IcoFont;
+        }
+
+        .nav_sign_in:hover:before {
+            color: #ffda00;
+        }
+
+        .nav_favorites:before {
+            margin-right: 5px;
+            font-size: 20px;
+            font-family: IcoFont;
+            content: "\ef44   ";
+        }
+
+        .nav_favorites:hover:before {
+            color: #ffda00;
+        }
+
+        .nav_cart:before {
+            font-size: 24px;
+            margin-right: 5px;
+            content: "\efe7";
+            font-family: IcoFont;
+        }
+
+        .nav_cart:hover:before {
+            color: #ffda00;
+        }
+
+        #nav_wrapper {
+            display: flex;
+            flex-direction: column;
+            height: 100px;
+            width: 970px;
+        }
+
+        #nav_logo_container {
+            display: flex;
+            width: 230px;
+            height: 100%;
+        }
+
+        .gearBestLogo {
+            max-width: 100%;
+            max-height: 100px;
+            margin: 25px 0px;
+        }
+
+        .countryFlag {
+            height: 13px;
+            width: 22px;
+            margin: 0px 4px;
+        }
+
+        #container {
+            width: 1200px;
+            margin: auto;
+        }
+
+        /* 1st BOX */
+
+        /* 2nd BOX */
+        #box2 {
+            display: flex;
+            width: 100%;
+            /* height : 30px; */
+            /* border : 1px solid green;  */
+            font-weight: bold;
+            font-size: 20px;
+            padding-left: 40px;
+            height: 50px;
+            align-items: top;
+            margin-bottom: 20px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+            ;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-family: sans-serif;
+            padding: 16px 60px 0px 60px;
+            font-size: 19px;
+            font-weight: 700;
+        }
+
+
+        #box2 .A {
+            font-size: 16px;
+            margin-top: 4px;
+            padding-left: 120px;
+        }
+
+        #box2>p {
+            border: 0.1px solid grey;
+            /* background-color: grey;   */
+            height: 20px;
+        }
+
+        #container>#box3 {
+            /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+        }
+
+        /* /* 3rd BOX */
+        #box3 {
+            display: flex;
+            margin-top: -5px;
+            width: 100%;
+            height: 1100px
+            /* border : 1px solid blue; */
+
+        }
+
+        /* 3RD BOX 1ST LEFT SMALL BOX */
+        #box3>.sbox1 {
+            width: 20%;
+            height: 700px;
+            /* border : 1px solid pink; */
+            overflow-y: scroll;
+            margin-left: 10px;
+            font-family: sans-serif;
+        }
+
+        .sbox1::-webkit-scrollbar {
+            width: 6px;
+            height: 60px;
+        }
+
+        .sbox1::-webkit-scrollbar-thumb:hover {
+            background: rgb(195, 187, 208);
+            /* border: 0.25em solid  */
+            border-radius: 100vw;
+        }
+
+        .sbox1>.Title {
+            color: black;
+            margin: 13px 0px 0px 15px;
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+        .sbox1 > p:hover {
+            cursor: pointer;
+        }
+
+        .sbox1 > h3, .sbox1 > h4{
+            font-size: 10px;
+            font-family: sans-serif;
+        }
+
+        .sbox1>h4 {
+            color: rgb(26, 26, 26);
+            margin-left: 15px;
+            font-size: 16px;
+            font-weight: 649;
+        }
+
+        .sbox1>p {
+            font-size: 13.5px;
+            margin-left: 15px;
+        }
+
+        .sbox1>p:hover {
+            font-weight: bold;
+        }
+
+        .sbox1>.New {
+            margin: 30px 15px 15px 15px;
+        }
+
+        /* 3RD BOX 1ST RIGHT SMALL BOX */
+        #box3>.sbox2 {
+            width: 79%;
+            height: 800px;
+            /* border : 1px solid orange; */
+        }
+
+        /* 3RD BOX 1ST RIGHT SMALL BOX */
+        .sbox2>div {
+            margin-left: 20px;
+
+        }
+
+        /* 3RD BOX 1ST RIGHT SMALL BOX 1ST BOX */
+        .sbox2>.sSbox1 {
+            width: 99%;
+            height: 230px;
+            /* border : 1px solid black; */
+            margin-top: 10px;
+        }
+
+        .sSbox1>#g {
+            margin-left: -5px;
+            padding: 14px 15px 3.5px 15px;
+            text-align: center;
+
+        }
+
+        .fa {
+            border: 1px solid black;
+            padding: 3px;
+        }
+
+        /* 3RD BOX 1ST RIGHT SMALL BOX 2ND BOX */
+        .sbox2>.sSbox2 {
+            width: 99%;
+            height: 35px;
+            /* border : 1px solid gold; */
+            font-weight: bold;
+            margin-top:20px;
+        }
+
+        /* 3RD BOX 1ST RIGHT SMALL BOX 3RD BOX */
+        .sbox2>.sSbox3 {
+            width: 97%;
+            height: 100%;
+            /* border : 1px solid teal;  */
+            display: grid;
+            grid-template-columns: repeat(3, 220px);
+            grid-gap: 60px;
+            overflow-y: scroll;
+            padding: 10px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 20px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgb(108, 117, 125);
+            border-radius: 100vw;
+        }
+
+        /* 3RD BOX 1ST RIGHT SMALL BOX 4TH BOX */
+        .sbox2>.sSbox4 {
+            display: none;
+            /* width : 99%;
+             border: 1px solid rgb(56, 190, 101);
+             height : 700px; */
+
+        }
+
+        .sSbox3>div {
+            max-height: 390px;
+        }
+
+        .sSbox3>div:hover {
+            /* border:1px solid red; */
+            /* box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; */
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+        }
+
+        /* 4TH BOX */
+        #box4 {
+            display: none;
+            width: 100%;
+            height: 600px;
+            border: 1px solid red;
+            margin-top: 66px;
+        }
+
+        /* #brand {
+            display: flex;
+            font-size: 14px;
+            margin-top: 35px;
+        }
+
+        #lilbox {
+            width: 70px;
+            height: 30px;
+            margin-left: 20px;
+            border: 1px solid rgb(233, 228, 228);
+        }
+
+        #lilbox:hover {
+            border: 1px solid black;
+        }
+
+        #lilbox>img {
+            width: 100%;
+            height: 100%;
+        } */
+
+        #money {
+            display: flex;
+            margin-top: 50px;
+        }
+
+        #money>button {
+            background-color: white;
+            font-size: 12px;
+            color: rgb(97, 92, 92);
+            margin-left: 10px;
+            margin-top: -10px;
+            padding: -50px;
+            border: 1px solid rgb(192, 188, 188);
+            border-radius: 2px;
+            height: 38px;
+            width: 114px;
+        }
+
+        #money>button:hover {
+            border: 1px solid black;
+            color: black;
+        }
+
+        /* #money>div {
+            padding-top: 5px;
+            margin-right: 10px;
+        } */
+
+        #min {
+            height: 38px;
+            width: 98px;
+            display: inline-block;
+            margin-left: 20px;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        #min-max {
+            height: 40px;
+            width: 40px;
+            display: inline-block;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 5px;
+            margin-left: -5px;
+            margin-right: -5px;
+        }
+
+        #max {
+            height: 38px;
+            width: 98px;
+            display: inline-block;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        #submit {
+            background-color: #ffda00;
+            display: inline-block;
+            height: 40px;
+            width: 70px;
+            border: 0px;
+            margin-left: 20px;
+        }
+
+        #sortby {
+            display: flex;
+            margin-top: 10px;
+        }
+
+        #sortby>div {
+            padding-top: 7px;
+            font-size: 14px;
+        }
+
+        #sortby>button {
+            padding: 10px;
+            margin-left: 12px;
+            background-color: white;
+            border: 0px;
+            font-size: 15px;
+        }
+
+        #sortby>button:hover {
+            background-color: #ffda00;
+        }
+
+        #gold:hover {
+            background-color: #ffda00;
+        }
+
+        #gold {
+            margin-left: 12px;
+            padding: 10px;
+            border: 0px;
+            font-size: 15px;
+        }
+
+        #picdiv {
+            height: 57%;
+            /* width:10%; */
+        }
+
+        #ip {
+            width: 220px;
+            height: 220px;
+            /* border : 1px solid yellow ; */
+        }
+
+        #pri {
+            display: flex;
+            align-items: center;
+            margin-left: 8px;
+            color: #f30240;
+            font-size: 18px;
+            margin-top: 19px;
+        }
+
+        #cartdiv {
+            /* border:1px solid green; */
+            display: flex;
+            justify-content: space-between;
+            height: 45px;
+        }
+
+        .sSbox3>div:hover>#cartdiv>#addcart {
+            display: block;
+            border: 1px solid red;
+            /* display: inline-block; */
+        }
+
+        #addcart {
+            display: none;
+            height: 35px;
+            background-color: #f30240;
+            color: white;
+            border: 0px;
+            margin-top: 4px;
+            border-radius: 3px;
+            margin-right: 8px;
+        }
+
+        #whish {
+            display: flex;
+            height: 18%;
+            /* border:1px solid purple; */
+            margin-top: 5px;
+            margin-left: 8px;
+            margin-bottom: 5px;
+            width: 90%;
+            overflow: hidden;
+        }
+
+        #Rating {
+            display: flex;
+            /* border : 1px solid teal; */
+            color: grey;
+            height: 30px;
+            justify-content: space-between;
+            padding: 0px 10px;
+            
+
+        } 
+
+        #Rating > p {
+            padding-top: 10px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+        }
+        
+        form {
+            margin-top: -10px;
+        }
+
+        .Ratings_review:before {
+            font-family: Icofont;
+            font-size: 18px;
+            content: "\f000";
+            color: rgb(255, 138, 0);
+            margin-right: 5px;
+            /* border : 0.5px solid red; */
+            /* text-shadow: -1px 1px 0 #000,
+                          1px 1px 0 #000,
+                         1px -1px 0 #000,
+                        -1px -1px 0 #000; */
+
+        }
+
+        .favourite_btn:before {
+            content: "\ef45";
+            font-family: Icofont;
+            font-size: 22px;
+            text-shadow: -1px 1px 0 #000,
+                1px 1px 0 #000,
+                1px -1px 0 #000,
+                -1px -1px 0 #000;
+            color: white;
+
+
+        }
+
+        .favourite_btn:hover:before {
+            content: "\ef45";
+            font-family: Icofont;
+            font-size: 22px;
+            text-shadow: -1px 1px 0 rgb(255, 138, 0),
+                1px 1px 0 rgb(255, 138, 0),
+                1px -1px 0 rgb(255, 138, 0),
+                -1px -1px 0 rgb(255, 138, 0);
+            cursor: pointer;
+        }
+
+        /************************** FOOTER STARTS HERE  ***************************/
+        #container_footer{
+            display: flex;
+            flex-direction: column;
+            width: 1200px;
+            height: 1150px;
+            /* border: 1px solid; */
+            margin: auto;
+        
+        }
+        #big{
+            width: 1200px;
+            height: 100%;
+            margin: auto;
+            /* border: 2px solid; */
+        }
+        #start{
+            width: 100%;
+            height: 80px;
+            /* border: 1px solid red; */
+            display: flex;
+        }
+        #search_footer{
+            width: 10%;
+            height: 100%;
+            font-family: sans-serif;  
+            /* border: 1px solid blueviolet; */
+            text-align: center;
+            margin-top: 20px;
+            
+        }
+        #search_list{
+            width:90%;
+            height: 100%;
+            font-family: sans-serif;
+            /* border: 1px solid blue; */
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #middle{
+            width: 100%;
+            height: 200px;
+            /* margin-top: 50px; */
+            /* border: 1px solid blue; */
+            margin-right:100px ;
+            margin-top: 100px;
+        }
+        #mid1{
+            
+            width: 100%;
+            height: 100%;
+            display: grid;
+            margin: auto;
+            display: flex;
+            text-align: center;
+        }
+        
+        #mid1>div{
+            width: 20%;
+            height: 100%;
+            /* border: 1px solid green; */
+        } 
+        #mid1>div>img{
+            width: 100%;
+            padding: 10px 0 0 ;
+
+        }
+        #middle2{
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100px;
+            margin-top: 30px;
+            display: flex;
+        }
+        .div1{
+            display: flex;
+            align-items: center;
+            width: 50%;
+            height: 100%;
+        }
+       .div2{
+            margin-left: 10%;
+           width:50%;
+           height:100%;
+           /* border: 2px solid; */
+       }
+       .social_icons{
+           display: flex;
+           width: 30%;
+           height:45%;
+           /* border: 1px solid red; */
+           margin: auto;
+           margin-top:53px;
+       }
+       .img_icons {
+           margin-left: 10px;
+       }
+
+        #bottom1{
+            width: 100%;
+            height: 400px;
+            margin-top: 40px;
+            /* border: 1px solid purple; */
+            display: flex;
+        }
+        #bottom2{
+            width: 100%;
+            height: 100px;
+            /* border: 1px solid red; */
+            display: flex;
+            padding-top: 80px;
+            gap: 20px;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        #border_base {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            margin: auto;
+            margin-top: 10px;
+            width: 1200px;
+            height: 50px;
+            padding-top: 10px;
+            /* border: 3px solid red; */
+            background-color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+
+        .p_footer {
+            padding: none;
+            margin-top: -10px;
+            margin-left: 50px;
+            width: 140px;
+            font-family: sans-serif;
+            color: gray;
+            font-size: 12px;
+        }
+
+        h4{
+            font-family: sans-serif;
+        }
+        h4:hover{
+            color: rgb(245, 230, 23);
+            cursor: hand;
+        }
+        h5{
+            text-align: center;
+            margin-top: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .newsletter{
+            display: flex;
+            margin: 50px auto;
+            justify-content: space-between;
+            height: 50%;
+            font-family: sans-serif;  
+        }
+
+        .div2 > img {
+            margin-top: 20px;
+        } 
+        .input_footer{
+            width: 350px;
+            height: 90%;
+            font-family: sans-serif;
+            margin-left: 15px;
+            border: 1px solid;      
+        }
+        .button_footer{
+            width: 25%;
+            height: 100%;
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            border: 1px solid black;
+           
+        }
+        button:hover{
+            background-color: rgb(138, 133, 133);
+            cursor: pointer;
+        }
+        .icon-fb:before{
+            content:"\E676";
+        }
+        #img{
+            margin: 30px 0 0 15px;
+        }
+        .list_footer{
+            font-size: 12px;
+            color: #666666;
+            width: 25%;
+            height: 100%;
+            /* border: 1px solid dodgerblue; */
+        } 
+        #info>h3{
+            font-size: 14px;
+            margin-left: 15px;
+        }
+        
+        #service>h3{
+            font-size: 14px;
+             margin-left: 15px;
+        }
+        #other>h3{
+            font-size: 14px;
+            margin-left: 15px;
+        }
+        .qrscanner>img{
+            margin-left: -15px;
+            justify-content: left;
+            display: flex;
+        }
+
+        #download_app {
+            margin-left: -20px;
+        }
+
+        .footer_h4_title {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .footer_h5_title {
+            margin-top: 10px;
+            margin-left: 40px;
+            font-family: sans-serif;
+            color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+        }
+
+        /******************** FOOTER ENDS HERE **********************/
+
+
+        /* FROM HERE ON COPY THE CODE TO OTHER PAGES WHICH USE THE DROPDOWN MENU */
+        .logOutDropDown {
+            margin-top: 70px;
+            margin-left: 20px;
+            display: none;
+            z-index: 1; 
+            position: absolute;
+            width: 100px;
+            height: 40px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        .nav_sign_in:hover > .logOutDropDown {
+            display: flex;
+        }
+
+        .logOutOption {
+            font-family: sans-serif;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2px;
+            width: 100%;
+        }
+
+        .logOutOption:hover {
+            color: maroon;
+            cursor: pointer;
+            background-color: antiquewhite;
+        }
+
+        .cartCounter {
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-left: 48px;
+            margin-bottom: 20px;
+            position: absolute;
+            z-index: 1;
+            background-color: #ec0e0e;
+            color: #fff;
+            height: 14px;
+            width: 14px;
+        }
+
+        .favCounter {
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-left: 74px;
+            margin-bottom: 20px;
+            position: absolute;
+            z-index: 1;
+            background-color: #ec0e0e;
+            color: #fff;
+            height: 14px;
+            width: 14px;
+        }
+    </style>
+</head>
+<!-- <link rel="stylesheet" href="icofont.min.css" /> -->
+
+<body>
+    <link rel="stylesheet" href="icofont.min.css" />
+    <div id="nav_bar">
+        <div id="nav_logo_container">
+            <img class="gearBestLogo"
+                src="https://uidesign.gbtcdn.com/GB/images/promotion/2019/a_evan/Gearbest/logo_gearbest.png?imbypass=true"
+                alt="" />
+        </div>
+        <div id="nav_wrapper">
+            <div id="nav_top">
+                <ul>
+                    <li class="dropdown_app_QR">
+                        <p>Save $3 with App</p>
+                        <div class="dropdown_app_qr_content"><img src="New items big/Gearbest_App_QRCODE.png" alt="">
+                        </div>
+                    </li>
+                    <li>Support Center</li>
+                    <li>
+                        Ship to
+                        <img class="countryFlag" src="https://uidesign.gbtcdn.com/GB/app/2018/flag_png/um.png"
+                            alt="Brazil" title="Brazil" class="headShortcut_nalflag" />/ USD
+                    </li>
+                    <li>Language</li>
+                    <li>Country Website</li>
+                </ul>
+            </div>
+
+            <div id="nav_main">
+                <div class="nav_search_bar">
+                    <div class="nav_search_category_select">All</div>
+                    <input type="text" id="nav_search_input" placeholder="iphone 13 pro max" />
+                    <button class="nav_search_button">
+                </div>
+                <div class="nav_bar_options">
+                    <div class="nav_sign_in">Sign In</div>
+                    <div class="nav_favorites">Favorites<div class="favCounter">0</div></div>
+                    <div class="nav_cart">Cart <div class="cartCounter">0</div></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="container">
+        <div class="box1"></div>
+        <div id="box2">
+            <a href=""> &#9776; Category</a>
+            <p></p>
+            <a class="A" href="">NEW ARRIVALS</a>
+        </div>
+        <div id="box3">
+            <div class="sbox1">
+                <h3 class="Title">Men's Fashion</h3>
+                <p>Watches</p>
+                <p>Shoes</p>
+                <p>Clothing</p>
+                <p>Backpacks</p>
+                <p>Luggage & Travel Bags</p>
+                <p>Accessories</p>
+                <p>Activewear</p>
+                <p>Socks</p>
+                <p>Swimwear</p>
+                <p>Jewelry</p>
+                <h4>NARROW SEARCH RESULTS</h4>
+                <p>ON SALE</p>
+                <p>IN STOCK</p>
+                <p>CLEARANCE</p>
+                <p class="New">New Arrivals</p>
+
+            </div>
+            <div class="sbox2">
+                <div class="sSbox1">
+                    <i class="fa fa-home fa-2x"></i>
+                    <select name="" id="g">
+                        <option value=""></i>Men's Fashion</option>
+                        <option value="">Backpacks</option>
+                        <option value="">Clothing</option>
+                        <option value="">Accessories</option>
+                        <option value="">Swimwear</option>
+                        <option value="">Socks</option>
+                        <option value="">Shoes</option>
+                        <option value="">Luggage & Travel Bags</option>
+                        <option value="">Activewear</option>
+                        <option value="">Watches</option>
+                        <option value="">Jewelry</option>
+                    </select>
+                    <!-- <div id="brand">Brand:</div> -->
+                    <div id="money">Price:
+                        <div id="custom">
+                            <form>
+                                <input type="number" placeholder="Min" id="min">
+                                <div id="min-max">&#8210;</div>
+                                <input type="number" placeholder="Max" id="max">
+                                <input type="submit" value="OK" id="submit" />
+                            </form>
+                        </div>
+                    </div>
+                    <div id="sortby">
+                        <select id="gold" value="">
+                            <option>Price</option>
+                            <option id="lth" value="lth">Low to High</option>
+                            <option id="htl" value="htl">High to Low</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="sSbox2">Men's Fashion</div>
+                <div class="sSbox3">
+                </div>
+                <div class="sSbox4"></div>
+            </div>
+        </div>
+        <div id="box4"></div>
+    </div>
+
+    <!--  -->
+    <div id="container_footer">
+        <div id="big">
+         <div id="start"> 
+        </div>
+        <div id="middle">
+            <div id="mid1">
+                <div>
+                    <img class="img_icons"src="https://css.gbtcdn.com/imagecache/gbw/img/site/new-logo.png" alt="logo">
+                    <h5 class="footer_h5_title">AFFORDABLE QUALITY FUN SHOPPING</h5>
+                </div>
+                <div>
+                    <img class="img_icons"style="width: 50px; height: 50px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAyCAMAAADGIxO9AAABAlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADg4OAAAAAAAAAAAAAAAAAAAAAAAADg4OAAAAAAAAAAAAAAAAAAAADg4OAAAADg4OAAAAAAAAAAAAAAAAAAAADk5OQAAAAAAADo6Oj///8AAADg4OAlJSUAAADg4OAaGhrg4ODg4ODg4OAAAADg4ODg4OAAAADh4eEAAADh4eHh4eHk5OQAAAAAAAAAAADg4OA4ODgeHh7Nzc0oKCgQEBAJCQnb29vExMSamppLS0sTExO/v7+zs7OoqKigoKB9fX1wcHBaWloYGBg9pae4AAAAQXRSTlMAgECHYZ94/h7swLwEAblL9/Hfx8e0r6eOfGNZVDcsE/TPe3drUkg8KSYZCwXt6+bm39nTu6ecmo2ETEc8MxMLCQmnFe4AAAFdSURBVEjH7ZTXbsIwFIbtAiUkJOxd9i50793/hLaU7vX+r1IzokCx1WukfBeRfXQ++eiPbObhsYRZXJPRvmVqcpBjqJVwCAq6SmcD2NL3bfsFA/EZ2vaPWOzocSCrdCygzg7ocYgR0QPu6AP3VOm1gVhYoWhBBMtXRE+ic+oI+5XyLA4UFI4PSLMTom98zRx6xiclWB0w1AlEehVxzmBEon182PvgjahTFgNoqgR2zTwtc8pSgE/qGABnCYmz3W8CIVORwCY7kjiJ/mRseQKWs87v0ZjDS6eQBVLyBJrutlOrnV+72y7EELIEgmd8QsutmgU+JQbkJAm4ZJxgS0m4xJdSiGGOoOUXV6CRxALlv06RcwPQxRhpzJOZVqqcR5iE9dmfKx1HHaM6afQDASZQO4KbCx7QdStXZIL/nUU8Z8UdP5DkMlLqR1GLQkmLKSgopQxTovm5jEaJeawOv0IPd8P/1V/7AAAAAElFTkSuQmCC" alt="">
+                    <h4 class="footer_h4_title">High Quality Selection</h4>
+                    <p class="p_footer">Total product quality control for peace of mind</p>
+                </div>
+                <div>
+                    <img class="img_icons"style="width: 50px;height: 50px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAABIFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADi4uIAAAAAAAAAAAAAAAAAAAAAAADg4OAAAAAAAADh4eEAAAAAAADg4ODg4OAAAAAAAAAAAAAAAAAAAADg4OAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADi4uLf39/f399paWkAAADg4OAAAAAAAADg4OAAAAA7OzsAAADg4OCZmZng4OAUFBQAAAAAAADg4ODg4OAAAADa2toAAAAAAAAAAADk5OQAAADg4OBwcHDExMRPT0+lpaWVlZWLi4s4ODgxMTElJSUJCQkHBwfY2NjLy8u+vr6xsbFbW1s8PDwYGBgODg61tbWpqamDg4NtbW1paWlKSkpISEhFRUUimxvjAAAAQ3RSTlMAgPbwl1/8tqJxQC8fGATi0cTAZ1Q7EAr37uvf2dWrqZyGeXRqSjkxJx758O/o383Jx7Csp6SjjYyMeGpTT0Q0KRoTY8WDigAAAZ5JREFUSMft1NdOG0EUgOHj8a4LMe4loYYO6b33f1gTNwgESM/7v0V2BjsGYTPDHUj8N3u00qcj7YxWrrpUTYaVtXOB3FwKKFT9xWqSo5Z8RX4aVJA2bsKTLMN0LpZPYNaT3ISKxDUUfPAjJVi1Qxre+pECRLpcs+uyfkcCPa31rZokIOFF5uCvjisbsugB6gHwTZs2MvS7m/k4XoQK+KpttRL/U+E4sc5Q6HeKQWNONVvIShaKz3S/a8M7NwPFESSFkgQ81oM2jn3FJLw/TQBDNgciYs88bs+bbRkIXST6fcjhny9mvBGbBXjlIh3oQtPOZbul4iLbEHU50HaNyAysuchBPLVaW3a+LnVQ4iK/gM6utj2UFSg5yc4+sP3Zzs/N+5cOYvrRi439ZG8kDVUnabbbe4Bd80mSkHOSLuz0jsg9WYcpcW+BFhDF41MJ4ZGb7HYAfprxtQSw6CC2LZrf+zf6Pkz4EL0/OMjJFKmGmwybz6fhgZxB2psnu/NiduyfVqGkyugWZGRBMpB8kRFNLcsZ1ROnWlppyFUXv3/1lqnU6lgCKQAAAABJRU5ErkJggg==" alt="">
+                    <h4 class="footer_h4_title">Affordable Price</h4>
+                    <p class="p_footer">Factory direct prices for maximum savings</p>
+                </div>
+                <div>
+                    <img class="img_icons"style="width: 50px; height: 50px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAA0lBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEAAAAAAAAAAAAAAAAAAAAtLS0AAAAAAAAAAAAAAAAAAAAAAADf398AAAAAAADg4OAAAAAAAADg4OAAAAAAAADg4ODf39/g4OArKysAAAAdHR0AAAAAAADi4uIAAADf398AAADm5uYAAAAAAADg4OD///9OTk5wcHDX19f+/v5qamr5+fmMjIwkJCQcHBwBAQHa2tpWVlZBQUEWFhbq6urBwcG5ubmnp6eWlpZSUlI4ODgqKiofnaNsAAAALXRSTlMA6vqngF3z8JhyPhMF5bagXtnAhGlEQDco6m78887KvKiioJ2UjFY0LxgYFAh5lWYlAAABTUlEQVRIx+2U126DQBBFFwwu2CbuJb33awhg4pJe/v+XwoiNsoJJBEiRXzgPPNyrsyM0sKKkpCDXtgYWzW7yRrONX2nzTgV/UGEVDRgLljHQZgsAvMFXxZWD3VmC6dFVXPV6Pfvs/DalzBgOqfqme5lFmaoK9GFS4Ygry7KGgz3aUGZFEC0bGGRWRqPRxQ1tqJJVoertHhFaHiUyiDwKYv51Cr1LboXYoLIK3Y/1S0qRGaeEjyDeV4piQmZJRQe8WQCJ+6P0lUwqjSpQbYgu8LBG9HgNF9TfSU7UDNBJqcWfTl0e5TvO3IUknXWVKc19EJ4T4UFFzXZMoTJsAEufan8JHG9FnBqGmhmDiUhQkyc+AzU+k9R1EHqdbkx37jhPn8qvxGWiihhNTCJ5EQS0G0uWXKZOEduQ9IWEz1Q6Gmheh894WqZhmC02KynIF2/ZrSepltS8AAAAAElFTkSuQmCC" alt="">
+                    <h4 class="footer_h4_title">Express Shipping</h4>
+                    <p class="p_footer">Fast, reliable delivery from global warehouse</p>
+                </div>
+                <div>
+                    <img class="img_icons"style="width:50px; height: 50px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAA0lBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEAAAAAAAAAAAAAAAAAAAAtLS0AAAAAAAAAAAAAAAAAAAAAAADf398AAAAAAADg4OAAAAAAAADg4OAAAAAAAADg4ODf39/g4OArKysAAAAdHR0AAAAAAADi4uIAAADf398AAADm5uYAAAAAAADg4OD///9OTk5wcHDX19f+/v5qamr5+fmMjIwkJCQcHBwBAQHa2tpWVlZBQUEWFhbq6urBwcG5ubmnp6eWlpZSUlI4ODgqKiofnaNsAAAALXRSTlMA6vqngF3z8JhyPhMF5bagXtnAhGlEQDco6m78887KvKiioJ2UjFY0LxgYFAh5lWYlAAABTUlEQVRIx+2U126DQBBFFwwu2CbuJb33awhg4pJe/v+XwoiNsoJJBEiRXzgPPNyrsyM0sKKkpCDXtgYWzW7yRrONX2nzTgV/UGEVDRgLljHQZgsAvMFXxZWD3VmC6dFVXPV6Pfvs/DalzBgOqfqme5lFmaoK9GFS4Ygry7KGgz3aUGZFEC0bGGRWRqPRxQ1tqJJVoertHhFaHiUyiDwKYv51Cr1LboXYoLIK3Y/1S0qRGaeEjyDeV4piQmZJRQe8WQCJ+6P0lUwqjSpQbYgu8LBG9HgNF9TfSU7UDNBJqcWfTl0e5TvO3IUknXWVKc19EJ4T4UFFzXZMoTJsAEufan8JHG9FnBqGmhmDiUhQkyc+AzU+k9R1EHqdbkx37jhPn8qvxGWiihhNTCJ5EQS0G0uWXKZOEduQ9IWEz1Q6Gmheh894WqZhmC02KynIF2/ZrSepltS8AAAAAElFTkSuQmCC" alt="">
+                    <h4 class="footer_h4_title">Worry-free After-sales</h4>
+                    <p class="p_footer">Instant access to professional support</p>
+                </div>
+            </div>
+        </div>
+            <div id="middle2">
+                <div class="div1">
+                  <div class="newsletter">
+                      <h4 style="color: gray;">Newsletter</h4>
+                      <input class="input_footer" type="text" name="E-mail" placeholder="Enter Email  to get 50 points">
+                      <button class="button_footer">Subscribe</button>
+                  </div>
+                </div>
+                <div class="div2">
+                    <img src="New Items big/social_icons.png" alt="">
+                </div>
+            </div>
+            <div id="bottom1">
+                <div class="list_footer">
+                    <div id="info">
+                        <h3>Company Information</h3>
+                        <p style="margin-left: 15px;">About Us</p>
+                        <p style="margin-left: 15px;">Top Searches</p>
+                        <p style="margin-left: 15px;">Privacy Policy</p>
+                        <p style="margin-left: 15px;">Terms and Conditions</p>
+                        <p style="margin-left: 15px;">Intellectual Property Policy</p>
+                        <p style="margin-left: 15px;">Testimonials</p>
+                        <p style="margin-left: 15px;">Contact Us</p>
+                        <p style="margin-left: 15px;">Report Security Issue</p>
+                        <p style="margin-left: 15px;">Sell on Gearbest</p>
+                        <p style="margin-left: 15px;">Cookies Policy</p>
+                        <p style="margin-left: 15px;">Top Brands</p>
+                        <p style="margin-left: 15px;">Gearbest Official Blog</p>
+                    </div>
+                </div>
+                <div class="list_footer">
+                    <div id="service">
+                        <h3>Customer Service</h3>
+                        <p style="margin-left: 15px;">Shipping Information</p>
+                        <p style="margin-left: 15px;">My Favorites</p>
+                        <p style="margin-left: 15px;">My Favorites</p>
+                        <p style="margin-left: 15px;">FAQ For Newsletter Subscription</p>
+                        <p style="margin-left: 15px;">My Points</p>
+                        <p style="margin-left: 15px;">Warranty and Return</p>
+                        <p style="margin-left: 15px;">Payment Methods</p>
+                        <p style="margin-left: 15px;">Deposit Expansion</p>
+                        <p style="margin-left: 15px;">FAQ & Support</p>
+                        <p style="margin-left: 15px;">Sitemap</p>
+                        <p style="margin-left: 15px;">Gearbest Wallet Instruction</p>
+                        <p style="margin-left: 15px;">FAQs about COVID-19</p>
+                    </div>
+                </div>
+                <div class="list_footer">
+                    <div id="other">
+                        <h3>Other Business</h3>
+                        <p style="margin-left: 15px;">Partnership Programs</p>
+                        <p style="margin-left: 15px;">Associate Program</p>
+                    </div>
+                </div>
+                <div class="list_footer">
+                    <div id="download_app">
+                        <h3>Download App!</h3>
+                        <span>Save $3 with App & New Users Only</span> 
+                        <div class="qrscanner">
+                            <img src="New Items big\Gearbest_App_QRCODE.png" alt="" class="src">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="bottom2">
+                <img src="New Items big/partners.png" alt="" class="src">
+            </div>
+        </div>
+    </div>
+    <div id="border_base">
+        <h5>Copyright © 2014-2021 Gearbest.com. All Rights Reserved.</h5>
+    </div>
+    <!--  -->
+</body>
+
+</html>
+<script>
+ document.querySelector(".gearBestLogo").addEventListener('click', function() {
+    window.location.href = "home_page.html"
+  })
+    document.querySelector(".nav_cart").addEventListener("click", function() {
+        window.location.href = "cart.html";
+    })
+
+    document.querySelector(".nav_sign_in").addEventListener("click", function() {
+        window.location.href = "login.html";
+    })
+
+    document.querySelector(".nav_favorites").addEventListener("click", function() {
+        window.location.href = "favorite.html";
+    })
+
+    let registeredUsers = JSON.parse(localStorage.getItem('userDataBase')) || [];
+    console.log(registeredUsers);
+    
+    let [isSignedIn, indexOfUserSignedIn] = JSON.parse(localStorage.getItem("loggedInUser")) || [false, -1];
+    let signedInUserEmail = null;
+    let userCart = null;
+    let userFavorites = null;
+
+    //If user is signed in we allocate user data to cart, favorites and email.
+    if (isSignedIn) {
+        signedInUserEmail = registeredUsers[indexOfUserSignedIn].useremail;
+        userCart = registeredUsers[indexOfUserSignedIn].userCart;
+        userFavorites = registeredUsers[indexOfUserSignedIn].userFavorites;
+    }
+
+    // console.log(signedInUserEmail)
+    if(isSignedIn) {
+        document.querySelector('.cartCounter').textContent = userCart.length;
+        document.querySelector('.favCounter').textContent = userFavorites.length;
+        document.querySelector(".nav_sign_in").textContent = signedInUserEmail;
+        document.querySelector(".nav_sign_in").style.overflow = "hidden";
+        document.querySelector(".nav_sign_in").style.marginLeft = "14px";
+        document.querySelector(".nav_sign_in").addEventListener("mouseover", function() {
+            let logoutBox = document.createElement('div');
+            logoutBox.setAttribute('class', "logOutDropDown");
+            if(document.querySelectorAll(".logOutDropDown").length > 0) {
+                return;
+            }
+
+            document.querySelector(".nav_sign_in").addEventListener("click", function() {
+                 location.reload();
+            })
+
+            logout_button = document.createElement("div");
+            logout_button.setAttribute("class", "logOutOption");
+            logout_button.textContent = "LOGOUT";
+
+            logout_button.addEventListener('click', function() {
+                localStorage.setItem("loggedInUser", JSON.stringify([false, -1]));
+                location.reload();
+            })
+
+            logoutBox.append(logout_button);
+            document.querySelector(".nav_sign_in").append(logoutBox);
+        })
+    }
+
+    // obj = [
+    //     {
+    //         brand: "Xiaomi",
+    //         img_url: "https://uidesign.gbtcdn.com/GB/image/6874/150x73.jpg"
+    //     },
+    //     {
+    //         brand: "Mijia",
+    //         img_url: "https://pdm.gw-ec.com/uploads/pdm-brand-logo/2019/03/05/20190307102445_5c8080ed0ecb3.jpg"
+    //     },
+    //     {
+    //         brand: "Huawei",
+    //         img_url: "https://css.gbtcdn.com/imagecache/GB/images/logolist/huawei.png"
+    //     },
+    //     {
+    //         brand: "Alfawise",
+    //         img_url: "https://uidesign.gbtcdn.com/GB/images/index/2018/brand_banner/Alfawise/Alfawise_2.jpg?impolicy=hight"
+    //     },
+    //     {
+    //         brand: "Excelvan",
+    //         img_url: "https://uidesign.gbtcdn.com/GB/images/others/top_brands/Excelvan-326.jpg"
+    //     },
+    //     {
+    //         brand: "Gocomma",
+    //         img_url: "https://uidesign.gbtcdn.com/GB/images/banner/others/gocomme.png"
+    //     },
+    // ]
+    // obj.map(function (elem) {
+    //     var lilbox = document.createElement("button");
+    //     lilbox.setAttribute("id", "lilbox");
+
+    //     lilbox.addEventListener("click", function () {
+    //         brandFilter(event, elem)
+    //     });
+    //     var image = document.createElement("img");
+    //     image.setAttribute("src", elem.img_url);
+    //     image.setAttribute("id", "pic");
+    //     lilbox.append(image);
+    //     document.querySelector("#brand").append(lilbox);
+    // });
+    // var d = document.createElement("div");
+    // d.textContent = "Price:";
+    var b1 = document.createElement("button");
+    b1.textContent = "$01.00-$20.00";
+    b1.addEventListener("click", function () {
+        priceFilter1(min = 01, max = 20)
+    });
+    var b2 = document.createElement("button");
+    b2.textContent = "$20.01-$40.00";
+    b2.addEventListener("click", function () {
+        priceFilter2(min = 20, max = 40)
+    });
+    var b3 = document.createElement("button");
+    b3.textContent = "$40.01-$60.00";
+
+    b3.addEventListener("click", function () {
+        priceFilter3(min = 40, max = 60)
+    });
+    var b4 = document.createElement("button");
+    b4.textContent = "$60.01-$100.00";
+    b4.addEventListener("click", function () {
+        priceFilter4(min = 60, max = 100)
+    });
+    var b5 = document.createElement("button");
+    b5.textContent = "$100.01-$300.00";
+    b5.addEventListener("click", function () {
+        priceFilter5(min = 100, max = 300)
+    });
+    var b6 = document.createElement("button");
+    b6.textContent = "$300.01-$500.00";
+    b6.addEventListener("click", function () {
+        priceFilter6(min = 300, max = 500)
+    });
+    var d1 = document.querySelector("#custom")
+    document.querySelector("#money").append(b1, b2, b3, b4, b5, b6, d1)
+    var b = document.createElement("div");
+    b.textContent = "Sort By:"
+    var btn1 = document.createElement("button");
+    btn1.textContent = "Recommended";
+    btn1.addEventListener('click', sortRecommended);
+    btn1.setAttribute("id", "recommend")
+    var btn2 = document.createElement("button");
+    btn2.addEventListener('click', sortHottest);
+    btn2.textContent = "Hottest";
+    var btn3 = document.createElement("button");
+    btn3.textContent = "Newest";
+    btn3.addEventListener('click', sortRecommended);
+    var btn4 = document.createElement("button");
+    btn4.textContent = "Rating";
+    btn4.addEventListener('click', sortHottest);
+    var btn5 = document.createElement("button");
+    btn5.textContent = "Trending";
+    btn5.addEventListener('click', sortTrending);
+    var p = document.querySelector("#gold");
+    document.querySelector("#sortby").append(b, btn1, btn2, btn3, btn4, btn5, p)
+
+    var appliancesdata = [
+         //SHOES
+        // AILADUN
+        {
+            name : "AILADUN Men's Shoes Hand Stitching Casual Large Size",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Electronic/2019/08/05/goods_thumb_220-v2/20190805174256_51935.jpg",
+            price : 65.08,
+        },
+        {
+            name : "AILADUN Men's Fashion Striped Outdoor Lace-up Sneakers Thick Bottom",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Electronic/2019/07/05/goods_thumb_220-v1/20190705185625_52652.jpg",
+            price : 453.66,
+        },
+        {
+            name : "AILADUN Men's Sport Shoes Breathable Large Size",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Electronic/2019/07/24/goods_thumb_220-v2/20190724145430_58592.jpg",
+            price : 350.90,
+        },
+        {
+            name : "AILADUN Fly Woven Sneakers Low-top Color-matching Running Shoes",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Electronic/2019/12/19/goods_thumb_220-v1/20191219091109_88952.jpg",
+            price : 476.66,
+        },
+        {
+            name : "AILADUN Men Sneaker Personality Mixed Color Breathable Casual Sports Shoes",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Electronic/2020/04/20/goods_thumb_220-v1/20200420175349_5e9d712df0554.jpg",
+            price : 30.17,
+        },
+        //SENBAO
+        {
+            name : "SENBAO Men Shoes Breathable Mesh Outdoor Casual Leather Sandals",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Electronic/2020/06/19/goods_thumb_220-v1/20200619111431_5eec2d9753ea8.jpg",
+            price : 32.30,
+        },
+        {
+            name : "SENBAO Men Full Grain Leather Lace Up Mid-high Shoes Durable Outdoor Footwear",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Electronic/2019/09/26/goods_thumb_220-v1/20190926141047_28930.jpg",
+            price : 60.62,
+        },
+        {
+            name : "SENBAO Men Shoes Matte Leather Mesh Cloth Round Toe Casual Footwear",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Electronic/2020/05/12/goods_thumb_220-v1/20200512174753_5eba70c94cebf.jpg",
+            price : 47.99,
+        },
+        {
+            name : "SENBAO Men Shoes Matte Leather Mesh Cloth Round Toe Casual Footwear",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Electronic/2020/05/12/goods_thumb_220-v1/20200512174754_5eba70caadda2.jpg",
+            price : 47.99,
+        },
+        {
+            name : "SENBAO Men Shoes Matte Leather Mesh Cloth Round Toe Casual Footwear",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Electronic/2020/05/12/goods_thumb_220-v1/20200512174754_5eba70ca5b3b4.jpg",
+            price : 47.99,
+        },
+        //BAGS
+        //HIKING BAGS
+        {
+            name : "Mountaineering Bags Large Capacity Outdoor Sports Camouflage Backpack",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/2020/09/27/goods_thumb_220-v2/20200927155033_46232.jpg",
+            price : 40.99,
+        },
+        {
+            name : "Mountaineering Backpack Travel Sports Bag",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/2020/09/27/goods_thumb_220-v2/20200927155015_50233.jpg",
+            price : 51.99,
+        },
+        //LAPTOP BAGS
+        {
+            name : "Men Anti Thief Backpacks Fashion Male Laptop USB Backbag Travel Bag",
+            img : "https://gloimg.gbtcdn.com/soa/gb/thumb-extend/pdm-provider-img/straight-product-img/20180320/T021362/T0213620013/source-img/165804-7362.jpg",
+            price : 35.00,
+        },
+        {
+            name : "Korean Shoulder Bag Female College Students Wind Bags Outdoor Leisure Travel Backpack Computer Bag Man Contracted",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/2020/09/27/goods_thumb_220-v3/20200927155100_16952.jpg",
+            price : 30.99,
+        },
+        //CASUAL BAGS
+        {
+            name : "Canvas Backpack Retro Crazy Horse Leather Casual Computer Bag",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/2020/09/27/goods_thumb_220-v2/20200927174715_15679.jpg",
+            price : 67.40,
+        },
+        //CLOTHING
+        {
+            name : "Mountainskin New Men&39s Leather Jackets Autumn Casual Motorcycle PU Jacket Biker Leather Coats Brand Clothing EU Size SA722",
+            img : "https://gloimg.gbtcdn.com/soa/gb/store/6866331803104505856/16421/gb_clothing_img-v1/d6e1acb6230c.jpg",
+            price : 50.16,
+        },
+        {
+            name : "2021 KB Summer New Men&39s Short-Sleeved T-shirt Cotton and Linen Led Casual Men&39s T-shirt Shirt Male Breathable S-3XL",
+            img : "https://gloimg.gbtcdn.com/soa/gb/store/6866331803104505856/16423/gb_clothing_img-v4/063d93b7f8f7.jpg",
+            price : 14.24,
+        },
+        {
+            name : "Men Real Leather Jacket Men Motorcycle Removable Hood winter coat Men Warm Genuine Leather Jackets",
+            img : "https://gloimg.gbtcdn.com/soa/gb/item/6866331803104505856/16400/gb_clothing_img-v1/a1ba4998839e.jpg",
+            price : 285.31,
+        },
+        {
+            name : "Men Thickened Down Jacket -30 Winter Warm Down Coat 2021 New Men Fashion Long White Duck Hooded Down Parkas Plus Size 5XL",
+            img : "https://gloimg.gbtcdn.com/soa/gb/item/6866331803104505856/16399/gb_clothing_img-v1/cd8a98497308.jpg",
+            price : 129.32,
+        },
+        {
+            name : "Cotton Harem Pants Men Solid Elastic Waist Streetwear Joggers 2020 New Baggy Drop-crotch Pants Casual Trousers Men Dropshipping",
+            img : "https://gloimg.gbtcdn.com/soa/gb/item/6866331803104505856/16391/gb_clothing_img-v1/3f61ec72a0ec.jpg",
+            price : 36.36,
+        },
+        //ACTIVE WEAR
+        {
+            name : "Fast Dry Fitness Suits Men's T-shirt Basketball Running Fitness Suits",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-provider-img/straight-product-img/20181206/T033390/T0333900103/gb_clothing_img-v1/183847-9476.jpg",
+            price : 19.39,
+        },
+        {
+            name : "Men's Sports Fitness Running Training Loose Casual Quick-drying Shorts",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-provider-img/straight-product-img/20180922/T025361/T0253610112/gb_clothing_img-v1/164012-6633.jpg",
+            price : 20.45,
+        },
+        {
+            name : "Men's Fitness Printing Sports Running Training Quick-drying Tight T-Shirt",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-provider-img/straight-product-img/20180920/T025361/T0253610099/gb_clothing_img-v1/161711-5430.jpg",
+            price : 21.71,
+        },
+        {
+            name : "A011838 Summer Men Running Fitness Shorts Solid Color Three-point Pants Active Bottoms",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Electronic/2021/03/22/gb_clothing_img-v1/20210322181551_60586e577e27c.jpg",
+            price : 26.27,
+        },
+        {
+            name : "Men's Sports Set Camouflage Stitching Hood Fitness Clothes Outdoor Sweating Running Jacket Two-piece Set",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/2021/01/27/gb_clothing_img-v1/20210127120335_10583.jpg",
+            price : 59.99,
+        },
+        //SHOES
+        // AILADUN
+        {
+            name : "AILADUN Men's Shoes Hand Stitching Casual Large Size",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Electronic/2019/08/05/goods_thumb_220-v2/20190805174256_51935.jpg",
+            price : 65.08,
+        },
+        {
+            name : "AILADUN Men's Fashion Striped Outdoor Lace-up Sneakers Thick Bottom",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Electronic/2019/07/05/goods_thumb_220-v1/20190705185625_52652.jpg",
+            price : 453.66,
+        },
+        {
+            name : "AILADUN Men's Sport Shoes Breathable Large Size",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Electronic/2019/07/24/goods_thumb_220-v2/20190724145430_58592.jpg",
+            price : 350.90,
+        },
+        {
+            name : "AILADUN Fly Woven Sneakers Low-top Color-matching Running Shoes",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Electronic/2019/12/19/goods_thumb_220-v1/20191219091109_88952.jpg",
+            price : 476.66,
+        },
+        {
+            name : "AILADUN Men Sneaker Personality Mixed Color Breathable Casual Sports Shoes",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Electronic/2020/04/20/goods_thumb_220-v1/20200420175349_5e9d712df0554.jpg",
+            price : 30.17,
+        },
+        //SENBAO
+        {
+            name : "SENBAO Men Shoes Breathable Mesh Outdoor Casual Leather Sandals",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Electronic/2020/06/19/goods_thumb_220-v1/20200619111431_5eec2d9753ea8.jpg",
+            price : 32.30,
+        },
+        {
+            name : "SENBAO Men Full Grain Leather Lace Up Mid-high Shoes Durable Outdoor Footwear",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Electronic/2019/09/26/goods_thumb_220-v1/20190926141047_28930.jpg",
+            price : 60.62,
+        },
+        {
+            name : "SENBAO Men Shoes Matte Leather Mesh Cloth Round Toe Casual Footwear",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Electronic/2020/05/12/goods_thumb_220-v1/20200512174753_5eba70c94cebf.jpg",
+            price : 47.99,
+        },
+        {
+            name : "SENBAO Men Shoes Matte Leather Mesh Cloth Round Toe Casual Footwear",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Electronic/2020/05/12/goods_thumb_220-v1/20200512174754_5eba70caadda2.jpg",
+            price : 47.99,
+        },
+        {
+            name : "SENBAO Men Shoes Matte Leather Mesh Cloth Round Toe Casual Footwear",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Electronic/2020/05/12/goods_thumb_220-v1/20200512174754_5eba70ca5b3b4.jpg",
+            price : 47.99,
+        },
+        //BAGS
+        //HIKING BAGS
+        {
+            name : "Mountaineering Bags Large Capacity Outdoor Sports Camouflage Backpack",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/2020/09/27/goods_thumb_220-v2/20200927155033_46232.jpg",
+            price : 40.99,
+        },
+        {
+            name : "Mountaineering Backpack Travel Sports Bag",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/2020/09/27/goods_thumb_220-v2/20200927155015_50233.jpg",
+            price : 51.99,
+        },
+        //LAPTOP BAGS
+        {
+            name : "Men Anti Thief Backpacks Fashion Male Laptop USB Backbag Travel Bag",
+            img : "https://gloimg.gbtcdn.com/soa/gb/thumb-extend/pdm-provider-img/straight-product-img/20180320/T021362/T0213620013/source-img/165804-7362.jpg",
+            price : 35.00,
+        },
+        {
+            name : "Korean Shoulder Bag Female College Students Wind Bags Outdoor Leisure Travel Backpack Computer Bag Man Contracted",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/2020/09/27/goods_thumb_220-v3/20200927155100_16952.jpg",
+            price : 30.99,
+        },
+        //CASUAL BAGS
+        {
+            name : "Canvas Backpack Retro Crazy Horse Leather Casual Computer Bag",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/2020/09/27/goods_thumb_220-v2/20200927174715_15679.jpg",
+            price : 67.40,
+        },
+        //CLOTHING
+        {
+            name : "Mountainskin New Men&39s Leather Jackets Autumn Casual Motorcycle PU Jacket Biker Leather Coats Brand Clothing EU Size SA722",
+            img : "https://gloimg.gbtcdn.com/soa/gb/store/6866331803104505856/16421/gb_clothing_img-v1/d6e1acb6230c.jpg",
+            price : 50.16,
+        },
+        {
+            name : "2021 KB Summer New Men&39s Short-Sleeved T-shirt Cotton and Linen Led Casual Men&39s T-shirt Shirt Male Breathable S-3XL",
+            img : "https://gloimg.gbtcdn.com/soa/gb/store/6866331803104505856/16423/gb_clothing_img-v4/063d93b7f8f7.jpg",
+            price : 14.24,
+        },
+        {
+            name : "Men Real Leather Jacket Men Motorcycle Removable Hood winter coat Men Warm Genuine Leather Jackets",
+            img : "https://gloimg.gbtcdn.com/soa/gb/item/6866331803104505856/16400/gb_clothing_img-v1/a1ba4998839e.jpg",
+            price : 285.31,
+        },
+        {
+            name : "Men Thickened Down Jacket -30 Winter Warm Down Coat 2021 New Men Fashion Long White Duck Hooded Down Parkas Plus Size 5XL",
+            img : "https://gloimg.gbtcdn.com/soa/gb/item/6866331803104505856/16399/gb_clothing_img-v1/cd8a98497308.jpg",
+            price : 129.32,
+        },
+        {
+            name : "Cotton Harem Pants Men Solid Elastic Waist Streetwear Joggers 2020 New Baggy Drop-crotch Pants Casual Trousers Men Dropshipping",
+            img : "https://gloimg.gbtcdn.com/soa/gb/item/6866331803104505856/16391/gb_clothing_img-v1/3f61ec72a0ec.jpg",
+            price : 36.36,
+        },
+        //ACTIVE WEAR
+        {
+            name : "Fast Dry Fitness Suits Men's T-shirt Basketball Running Fitness Suits",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-provider-img/straight-product-img/20181206/T033390/T0333900103/gb_clothing_img-v1/183847-9476.jpg",
+            price : 19.39,
+        },
+        {
+            name : "Men's Sports Fitness Running Training Loose Casual Quick-drying Shorts",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-provider-img/straight-product-img/20180922/T025361/T0253610112/gb_clothing_img-v1/164012-6633.jpg",
+            price : 20.45,
+        },
+        {
+            name : "Men's Fitness Printing Sports Running Training Quick-drying Tight T-Shirt",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-provider-img/straight-product-img/20180920/T025361/T0253610099/gb_clothing_img-v1/161711-5430.jpg",
+            price : 21.71,
+        },
+        {
+            name : "A011838 Summer Men Running Fitness Shorts Solid Color Three-point Pants Active Bottoms",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Electronic/2021/03/22/gb_clothing_img-v1/20210322181551_60586e577e27c.jpg",
+            price : 26.27,
+        },
+        {
+            name : "Men's Sports Set Camouflage Stitching Hood Fitness Clothes Outdoor Sweating Running Jacket Two-piece Set",
+            img : "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/2021/01/27/gb_clothing_img-v1/20210127120335_10583.jpg",
+            price : 59.99,
+        },
+    ]
+       
+
+    displayData(appliancesdata);
+    function displayData(appliancesdata) {
+        document.querySelector(".sSbox3").innerHTML = "";
+        appliancesdata.map(function (data) {
+            var dis = document.createElement("div");
+            var dis1 = document.createElement("div")
+            dis1.setAttribute("id", "picdiv")
+            var image = document.createElement("img")
+            image.setAttribute("src", data.img);
+            image.setAttribute("id", "ip")
+            dis1.append(image)
+            var dis2 = document.createElement("div")
+            dis2.setAttribute("id", "whish")
+            var name = document.createElement("p")
+            name.textContent = data.name;
+            dis2.append(name)
+            var dis3 = document.createElement("div")
+            dis3.setAttribute("id", "cartdiv")
+            var pri = document.createElement("p")
+            pri.textContent = "$" + data.price;
+            pri.setAttribute("id", "pri")
+            var btn = document.createElement("button");
+            btn.textContent = "Add To Cart";
+            btn.setAttribute("id", "addcart")
+
+            //FUNCTION PART OF SIGNIN/SIGNUP FLOW
+            btn.addEventListener("click", function () {
+                addToCart(data);
+            });
+            dis3.append(pri, btn)
+            var dis4 = document.createElement("div")
+            dis4.setAttribute("id", "Rating")
+            //Ratings
+            var Ratings = Math.random() * (5 - 3.5) + 3.5;
+            Ratings = parseFloat(Ratings).toFixed(1);
+            //Reviews
+            var reviews = Math.random() * 500;
+            reviews = Math.ceil(reviews);
+            var Ratings_review = document.createElement("p")
+            Ratings_review.setAttribute("class", "Ratings_review")
+            Ratings_review.textContent = Ratings + " " + "(" + reviews + ")";
+
+            //Favourite
+            //FUNCTION PART OF SIGNIN/SIGNUP FLOW
+            var favourite = document.createElement("p")
+            favourite.addEventListener("click", function () {
+                addToFav(data);
+            });
+            favourite.setAttribute("class", "favourite_btn")
+            favourite.textContent = "";
+            dis4.append(Ratings_review, favourite)
+            dis.append(dis1, dis2, dis3, dis4)
+            document.querySelector(".sSbox3").append(dis)
+        });
+    }
+    
+    //FUNCTION PART OF USER FLOW
+    function addToCart(data) {
+        
+        if(isSignedIn) {
+            for(let i = 0; i < userCart.length; i++) {
+                if(userCart[i].img == data.img) {
+                    return alert("Item already added to cart!");
+                }
+            }
+            userCart.push(data);
+            registeredUsers[indexOfUserSignedIn].userCart = userCart;
+            localStorage.setItem("userDataBase", JSON.stringify(registeredUsers));
+            document.querySelector(".cartCounter").textContent = userCart.length;
+
+            alert("Item added to cart successfully!");
+        } else {
+            return alert("Please Sign in to access your Cart!")
+        }
+    }
+
+    //FUNCTION PART OF USER FLOW
+
+    function addToFav(data) {
+      
+        if(isSignedIn) {
+            for(let i = 0; i < userFavorites.length; i++) {
+                if(userFavorites[i].img == data.img) {
+                    return alert("The Item is already in your Wishlist!");
+                }
+            }
+            userFavorites.push(data);
+            registeredUsers[indexOfUserSignedIn].userFavorites = userFavorites;
+            localStorage.setItem("userDataBase", JSON.stringify(registeredUsers));
+            document.querySelector(".favCounter").textContent = userFavorites.length;
+
+            alert("Item added to Wishlist successfully!");
+        } else {
+            return alert("Please Sign in to access your Wishlist!")
+        }
+    }
+
+
+
+    //   filtering
+
+    var filtered_product = [];
+    function brandFilter(event, elem) {
+        console.log(elem.brand)
+        for (var i = 0; i < appliancesdata.length; i++) {
+            let flag = true;
+            // if (filtered_product.forEach(function (elem) {
+            //     elem.name == appliancesdata[i].name ? flag = false : console.log(1);
+            // }))
+            for (let j = 0; j < filtered_product.length; j++) {
+                if (filtered_product[j].name == appliancesdata[i].name) {
+                    flag = false;
+                    break;
+                }
+            }
+
+            if (flag == true) {
+                if (appliancesdata[i].name.includes(elem.brand)) {
+                    filtered_product.push(appliancesdata[i]);
+                }
+            }
+        }
+        console.log(appliancesdata.length)
+        displayData(filtered_product);
+    }
+    var filtered_product1 = [];
+    function priceFilter1(min = 01, max = 20) {
+        for (var i = 0; i < appliancesdata.length; i++) {
+            let flag = true;
+            for (let j = 0; j < filtered_product1.length; j++) {
+                if (filtered_product1[j].name == appliancesdata[i].name) {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag == true) {
+                if (appliancesdata[i].price >= min && appliancesdata[i].price <= max) {
+                    filtered_product1.push(appliancesdata[i])
+                }
+            }
+        }
+        displayData(filtered_product1)
+    }
+
+
+    var filtered_product2 = [];
+    function priceFilter2(min = 20, max = 40) {
+        for (var i = 0; i < appliancesdata.length; i++) {
+            let flag = true;
+            for (let j = 0; j < filtered_product2.length; j++) {
+                if (filtered_product2[j].name == appliancesdata[i].name) {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag == true) {
+                if (appliancesdata[i].price > min && appliancesdata[i].price <= max) {
+                    filtered_product2.push(appliancesdata[i])
+                }
+            }
+        }
+        displayData(filtered_product2)
+    }
+
+
+    var filtered_product3 = [];
+    function priceFilter3(min = 40, max = 60) {
+        for (var i = 0; i < appliancesdata.length; i++) {
+            let flag = true;
+            for (let j = 0; j < filtered_product3.length; j++) {
+                if (filtered_product3[j].name == appliancesdata[i].name) {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag == true) {
+                if (appliancesdata[i].price > min && appliancesdata[i].price <= max) {
+                    filtered_product3.push(appliancesdata[i])
+                }
+            }
+        }
+        displayData(filtered_product3)
+    }
+
+    var filtered_product4 = [];
+    function priceFilter4(min = 60, max = 100) {
+        for (var i = 0; i < appliancesdata.length; i++) {
+            let flag = true;
+            for (let j = 0; j < filtered_product4.length; j++) {
+                if (filtered_product4[j].name == appliancesdata[i].name) {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag == true) {
+                if (appliancesdata[i].price > min && appliancesdata[i].price <= max) {
+                    filtered_product4.push(appliancesdata[i])
+                }
+            }
+        }
+        displayData(filtered_product4)
+    }
+
+
+    var filtered_product5 = [];
+    function priceFilter5(min = 100, max = 300) {
+        for (var i = 0; i < appliancesdata.length; i++) {
+            let flag = true;
+            for (let j = 0; j < filtered_product5.length; j++) {
+                if (filtered_product5[j].name == appliancesdata[i].name) {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag == true) {
+                if (appliancesdata[i].price > min && appliancesdata[i].price <= max) {
+                    filtered_product5.push(appliancesdata[i])
+                }
+            }
+        }
+        displayData(filtered_product5)
+    }
+
+    var filtered_product6 = [];
+    function priceFilter6(min = 300, max = 500) {
+        for (var i = 0; i < appliancesdata.length; i++) {
+            let flag = true;
+            for (let j = 0; j < filtered_product6.length; j++) {
+                if (filtered_product6[j].name == appliancesdata[i].name) {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag == true) {
+                if (appliancesdata[i].price > min && appliancesdata[i].price <= max) {
+                    filtered_product6.push(appliancesdata[i])
+                }
+            }
+        }
+        displayData(filtered_product6)
+    }
+    var filtered_product7 = []
+    document.querySelector("form").addEventListener("submit", priceFilter7)
+    function priceFilter7(event) {
+        event.preventDefault();
+        var minprice = document.querySelector("#min").value;
+        var maxprice = document.querySelector("#max").value;
+        for (var i = 0; i < appliancesdata.length; i++) {
+            let flag = true;
+            for (let j = 0; j < filtered_product7.length; j++) {
+                if (filtered_product7[j].name == appliancesdata[i].name) {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag == true) {
+                if (appliancesdata[i].price >= minprice && appliancesdata[i].price <= maxprice) {
+                    filtered_product7.push(appliancesdata[i])
+                }
+            }
+        }
+        displayData(filtered_product7)
+    }
+
+    //SORTING
+
+    function sortRecommended() {
+        let sortedArray = appliancesdata.sort(function(a, b) {
+                if(a.name < b.name) {
+                    return -1;
+                } else {
+                    return 1;
+                }
+            })
+            displayData(sortedArray)
+    }
+
+    function sortTrending() {
+        let sortedArray = appliancesdata.sort(function(a, b) {
+                if(a.img < b.img) {
+                    return -1;
+                } else {
+                    return 1;
+                }
+            })
+            displayData(sortedArray)
+    }
+
+    function sortHottest() {
+        let sortedArray = appliancesdata.sort(function(a, b) {
+                if(a.name > b.name) {
+                    return -1;
+                } else {
+                    return 1;
+                }
+            })
+            displayData(sortedArray)
+    }
+
+    document.querySelector("#gold").addEventListener('change', function() {
+        if(event.target.value == "") {
+            return;
+        }
+        if(event.target.value == "lth") {
+            let sortedArray = appliancesdata.sort(function(a, b) {
+                if(a.price < b.price) {
+                    return -1;
+                } else {
+                    return 1;
+                }
+            })
+            displayData(sortedArray)
+        } else {
+            let sortedArray = appliancesdata.sort(function(a, b) {
+                if(a.price < b.price) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            })
+            displayData(sortedArray)
+        }
+     })
+</script>

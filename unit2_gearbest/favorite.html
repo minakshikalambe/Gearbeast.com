@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+  <link rel="icon" href="gearBestIcon.jpg" type="image/icon type" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/629044acfa.js" crossorigin="anonymous"></script>
+
+  <title>Gearbest: Affordable Quality, Fun Shopping</title>
+
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+    }
+
+    body::-webkit-scrollbar {
+      display: none;
+    }
+
+    #header {
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+
+    .hidden {
+      display: none !important;
+    }
+
+    #nav_bar {
+      display: flex;
+      margin: auto;
+      width: 1200px;
+      height: 100px;
+    }
+
+    #nav_top {
+      align-items: center;
+      justify-content: right;
+      display: flex;
+      margin: none;
+      padding-top: 10px;
+      height: 26px;
+      width: 970px;
+      font-size: 13px;
+    }
+
+    #nav_top ul li:nth-child(1):before {
+      font-family: IcoFont;
+      font-size: 18px;
+      content: "\efec";
+    }
+
+    #nav_top ul li:nth-child(1)::after,
+    #nav_top ul li:nth-child(3)::after,
+    #nav_top ul li:nth-child(4)::after,
+    #nav_top ul li:nth-child(5)::after,
+    .nav_search_category_select::after {
+      margin-left: 4px;
+      font-family: IcoFont;
+      content: "\ea99";
+      font-size: 16px;
+    }
+
+    #nav_top ul li:nth-child(1):hover:after,
+    #nav_top ul li:nth-child(5):hover:after {
+      font-family: IcoFont;
+      content: "\eaa1";
+      font-size: 16px;
+    }
+
+    #nav_top ul {
+      display: flex;
+      list-style-type: none;
+      color: #666;
+    }
+
+    #nav_top ul li {
+      align-items: center;
+      display: flex;
+      text-align: left;
+      margin-left: 30px;
+      cursor: pointer;
+    }
+
+    #nav_top ul li:hover {
+      text-decoration: underline;
+    }
+
+    #nav_main {
+      display: flex;
+      flex-direction: row;
+      margin: none;
+      padding: 14px 0px 0px 0px;
+      height: 50px;
+      width: 970px;
+    }
+
+    .nav_search_bar {
+      display: flex;
+      font-size: 14px;
+      margin-left: 150px;
+      height: 32px;
+      border: 2px solid #ffda00;
+      border-radius: 100px;
+      text-align: left;
+      width: 480px;
+    }
+
+    .nav_search_category_select {
+      margin: 0px 10px 0px 10px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    #nav_search_input {
+      border: none;
+      margin-right: 60px;
+      width: 356px;
+      height: 26px;
+      padding: 3px 0px;
+    }
+
+    .nav_search_button {
+      border-radius: 0px 10px 10px 0px;
+      align-self: right;
+      cursor: pointer;
+      width: 42px;
+      border: 0;
+      background-color: #ffda00;
+    }
+
+    .nav_search_button:before {
+      font-family: IcoFont;
+      font-size: 18px;
+      content: "\ed11";
+    }
+
+    .nav_bar_options {
+      margin-top: 5px;
+      color: #666;
+      justify-content: right;
+      align-items: center;
+      display: flex;
+      font-size: 15px;
+      width: 319px;
+      height: 28px;
+    }
+
+    .nav_bar_options>div {
+      margin-left: 30px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav_sign_in {
+      text-align: left;
+    }
+
+    .nav_sign_in:before {
+      margin-right: 5px;
+      font-size: 22px;
+      content: "\ecec    ";
+      font-family: IcoFont;
+    }
+
+    .nav_sign_in:hover:before {
+      color: #ffda00;
+    }
+
+    .nav_favorites:before {
+      margin-right: 5px;
+      font-size: 20px;
+      font-family: IcoFont;
+      content: "\ef44   ";
+    }
+
+    .nav_favorites:hover:before {
+      color: #ffda00;
+    }
+
+    .nav_cart:before {
+      font-size: 24px;
+      margin-right: 5px;
+      content: "\efe7";
+      font-family: IcoFont;
+    }
+
+    .nav_cart:hover:before {
+      color: #ffda00;
+    }
+
+    #nav_wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 100px;
+      width: 970px;
+    }
+
+    #black_yellow_bar {
+      /* background-color: rgb(255, 218, 0); */
+      display: flex;
+      text-align: center;
+      line-height: 40px;
+      font-size: 18px;
+      font-weight: 700;
+      margin: auto;
+      width: 1200px;
+      height: 40px;
+    }
+
+    #black_part {
+      width: 230px;
+      color: black;
+      /* background-color: rgb(0, 0, 0); */
+    }
+
+    #black_part>i {
+      margin: 5px;
+    }
+
+    #verticalLine {
+      width: 0.5px;
+      height: 20px;
+      background-color: gray;
+      margin: 10px 0 0 0;
+      opacity: 0.3;
+    }
+
+    #yellow_part {
+      margin-left: 20px;
+      width: 230px;
+      height: 40px;
+      font-size: 16px;
+    }
+
+    #nav_logo_container {
+      display: flex;
+      width: 230px;
+      height: 100%;
+    }
+
+    .gearBestLogo {
+      max-width: 100%;
+      max-height: 100px;
+      margin: 25px 0px;
+    }
+
+    .countryFlag {
+      height: 13px;
+      width: 22px;
+      margin: 0px 4px;
+    }
+
+    #site_wrap {
+      min-height: 2000px;
+      display: flex;
+      margin: auto;
+      width: 1200px;
+      flex-direction: column;
+    }
+
+    .whole_page {
+      background-color: #f4f4f4;
+      width: 100%;
+      height: auto;
+    }
+
+
+    .favorite_container {
+      width: 1200px;
+      height: auto;
+      /* border: 1px solid red; */
+      margin: auto;
+      padding: 30px 0 20px 0px;
+    }
+
+    .favorite_container>div {
+      width: 100%;
+      height: auto;
+      border: 1px solid #ffffff;
+      background-color: #ffffff;
+
+      margin: 0px 30px 0px 0px;
+    }
+
+    .favorite_container>div>div:nth-child(1)>p {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 20px 0 10px 0;
+      padding: 0 20px;
+      cursor: pointer;
+
+    }
+
+    .favorite_container>div>div:nth-child(1)>div {
+      width: auto;
+      height: 4px;
+      margin: 0px 1129px 0px 20px;
+      background-color: #ffda00;
+    }
+
+    hr {
+      margin: 0;
+      opacity: 0.3;
+    }
+
+    .favorite_container>div>div:nth-child(3) {
+      height: auto;
+      width: auto;
+      /* border: 1px solid green; */
+      padding: 20px 20px 30px 20px;
+    }
+
+    .favorite_container>div>div:nth-child(3)>div:nth-child(1) {
+      width: 55px;
+      height: 30px;
+      border: 0;
+      border-radius: 20px;
+      text-align: center;
+      line-height: 30px;
+      cursor: pointer;
+      background-color: #ffda00;
+      font-weight: 700;
+
+    }
+
+    .favorite_container>div>div:nth-child(3)>div:nth-child(2) {
+      margin: auto;
+    }
+
+
+    .favorite_container>div>div:nth-child(3)>div:nth-child(2)>img {
+      margin: 50px 530px 0px;
+    }
+
+    .favorite_container>div>div:nth-child(3)>div:nth-child(3)>p {
+      margin: 10px auto 0px;
+      font-size: 18px;
+      font-weight: 700;
+      padding-left: 38%;
+      color: #9999b3;
+    }
+
+    .favorite_container>div>div:nth-child(3)>div:nth-child(4)>p {
+      color: #99a6c4;
+      padding-left: 36%;
+      font-size: 14px;
+    }
+
+    .box_container {
+      min-height: 500px;
+      display: flex;
+      width: 1050px;
+      flex-wrap: wrap;
+      /* border: 1px solid red; */
+      margin: auto;
+    }
+
+    .box {
+      width: 220px;
+      height: 350px;
+      /* border: 1px solid red; */
+      border: 1px solid rgb(145, 141, 141, 0.3);
+      margin: 10px 20px;
+
+    }
+
+    .box:hover {
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    .box>div:nth-child(1) {
+      margin: auto;
+      padding: 0 20px;
+      position: relative
+    }
+
+    .box>div:nth-child(1)>img {
+      width: 178px;
+      height: 178px;
+      /* border: 1px solid red; */
+      cursor: pointer;
+
+    }
+
+    .box>div:nth-child(1)>div {
+      display: flex;
+      text-align: center;
+      justify-content: space-between;
+      margin: -40px 5px 0;
+      /* border: 1px solid red; */
+
+    }
+
+    .box>div:nth-child(1) button {
+      display: none;
+      width: 100%;
+      height: 30px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border: 0.5px solid whitesmoke;
+      color: white;
+    }
+
+    .box>div:nth-child(1):hover button {
+      display: block;
+      cursor: pointer;
+    }
+
+    .box>div:nth-child(1)>div>button:hover {
+      background-color: #ffda00
+    }
+
+    .box>div:nth-child(2) {
+      /* display: inline-block; */
+      /* border: 1px solid red; */
+      width: 100%;
+      height: 20%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin: 20px 10px;
+    }
+
+    .box>div:nth-child(2)>p {
+      margin-top: 30px;
+      transform: scale(1);
+      word-wrap: break-word;
+      word-break: break-word;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-right: 20px;
+      cursor: pointer;
+    }
+
+    .box>div:nth-child(2)>p:hover {
+      color: red;
+    }
+
+    .box>div:nth-child(3)>p {
+      margin: 20px 10px;
+      font-size: 20px;
+      font-weight: 600;
+      color: red;
+    }
+
+            /************************** FOOTER STARTS HERE  ***************************/
+            #container_footer{
+            display: flex;
+            flex-direction: column;
+            width: 1200px;
+            height: 1150px;
+            /* border: 1px solid; */
+            margin: auto;
+        
+        }
+        #big{
+            width: 1200px;
+            height: 100%;
+            margin: auto;
+            /* border: 2px solid; */
+        }
+     
+        #search_footer{
+            width: 10%;
+            height: 100%;
+            font-family: sans-serif;  
+            /* border: 1px solid blueviolet; */
+            text-align: center;
+            margin-top: 20px;
+            
+        }
+        #search_list{
+            width:90%;
+            height: 100%;
+            font-family: sans-serif;
+            /* border: 1px solid blue; */
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #middle{
+            width: 100%;
+            height: 200px;
+            /* margin-top: 50px; */
+            /* border: 1px solid blue; */
+            margin-right:100px ;
+            margin-top: 100px;
+        }
+        #mid1{
+            
+            width: 100%;
+            height: 100%;
+            display: grid;
+            margin: auto;
+            display: flex;
+            text-align: center;
+        }
+        
+        #mid1>div{
+            width: 20%;
+            height: 100%;
+            /* border: 1px solid green; */
+        } 
+        #mid1>div>img{
+            width: 100%;
+            padding: 10px 0 0 ;
+
+        }
+        #middle2{
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100px;
+            margin-top: 30px;
+            display: flex;
+        }
+        .div1{
+            display: flex;
+            align-items: center;
+            width: 50%;
+            height: 100%;
+        }
+       .div2{
+            margin-left: 10%;
+           width:50%;
+           height:100%;
+           /* border: 2px solid; */
+       }
+       .social_icons{
+           display: flex;
+           width: 30%;
+           height:45%;
+           /* border: 1px solid red; */
+           margin: auto;
+           margin-top:53px;
+       }
+       .img_icons {
+           margin-left: 10px;
+       }
+
+        #bottom1{
+            width: 100%;
+            height: 400px;
+            margin-top: 40px;
+            /* border: 1px solid purple; */
+            display: flex;
+        }
+        #bottom2{
+            width: 100%;
+            height: 100px;
+            /* border: 1px solid red; */
+            display: flex;
+            padding-top: 80px;
+            gap: 20px;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        #border_base {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            margin: auto;
+            margin-top: 10px;
+            width: 1200px;
+            height: 50px;
+            padding-top: 10px;
+            /* border: 3px solid red; */
+            background-color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+
+        .p_footer {
+            padding: none;
+            margin-top: -10px;
+            margin-left: 50px;
+            width: 140px;
+            font-family: sans-serif;
+            color: gray;
+            font-size: 12px;
+        }
+
+        h4{
+            font-family: sans-serif;
+        }
+        h4:hover{
+            color: rgb(245, 230, 23);
+            cursor: hand;
+        }
+        h5{
+            text-align: center;
+            margin-top: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .newsletter{
+            display: flex;
+            margin: 50px auto;
+            justify-content: space-between;
+            height: 50%;
+            font-family: sans-serif;  
+        }
+
+        .div2 > img {
+            margin-top: 20px;
+        } 
+        .input_footer{
+            width: 350px;
+            height: 90%;
+            font-family: sans-serif;
+            margin-left: 15px;
+            border: 1px solid;      
+        }
+        .button_footer{
+            width: 25%;
+            height: 100%;
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            border: 1px solid black;
+           
+        }
+        button:hover{
+            background-color: rgb(138, 133, 133);
+            cursor: pointer;
+        }
+        .icon-fb:before{
+            content:"\E676";
+        }
+        #img{
+            margin: 30px 0 0 15px;
+        }
+        .list_footer{
+            font-size: 12px;
+            color: #666666;
+            width: 25%;
+            height: 100%;
+            /* border: 1px solid dodgerblue; */
+        } 
+        #info>h3{
+            font-size: 14px;
+            margin-left: 15px;
+        }
+        
+        #service>h3{
+            font-size: 14px;
+             margin-left: 15px;
+        }
+        #other>h3{
+            font-size: 14px;
+            margin-left: 15px;
+        }
+        .qrscanner>img{
+            margin-left: -15px;
+            justify-content: left;
+            display: flex;
+        }
+
+        #download_app {
+            margin-left: -20px;
+        }
+
+        .footer_h4_title {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .footer_h5_title {
+            margin-top: 10px;
+            margin-left: 40px;
+            font-family: sans-serif;
+            color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+        }
+
+        /* FROM HERE ON COPY THE CODE TO OTHER PAGES WHICH USE THE DROPDOWN MENU */
+        .logOutDropDown {
+            margin-top: 70px;
+            margin-left: 20px;
+            display: none;
+            z-index: 1; 
+            position: absolute;
+            width: 100px;
+            height: 40px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        .nav_sign_in:hover > .logOutDropDown {
+            display: flex;
+        }
+
+        .logOutOption {
+            font-family: sans-serif;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2px;
+            width: 100%;
+        }
+
+        .logOutOption:hover {
+            color: maroon;
+            cursor: pointer;
+            background-color: antiquewhite;
+        }
+
+        .cartCounter {
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-left: 48px;
+            margin-bottom: 20px;
+            position: absolute;
+            z-index: 1;
+            background-color: #ec0e0e;
+            color: #fff;
+            height: 14px;
+            width: 14px;
+        }
+
+        .favCounter {
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-left: 74px;
+            margin-bottom: 20px;
+            position: absolute;
+            z-index: 1;
+            background-color: #ec0e0e;
+            color: #fff;
+            height: 14px;
+            width: 14px;
+        }
+  </style>
+</head>
+
+<body>
+  <link rel="stylesheet" href="icofont.min.css" />
+  <div id="header">
+    <div id="nav_bar">
+      <div id="nav_logo_container">
+        <img class="gearBestLogo"
+          src="https://uidesign.gbtcdn.com/GB/images/promotion/2019/a_evan/Gearbest/logo_gearbest.png?imbypass=true"
+          alt="" />
+      </div>
+      <div id="nav_wrapper">
+        <div id="nav_top">
+          <ul>
+            <li>Save $3 with App</li>
+            <li>Support Center</li>
+            <li>
+              Ship to
+              <img class="countryFlag" src="https://uidesign.gbtcdn.com/GB/app/2018/flag_png/um.png" alt="Brazil"
+                title="Brazil" class="headShortcut_nalflag" />/ USD
+            </li>
+            <li>Language</li>
+            <li>Country Website</li>
+          </ul>
+        </div>
+
+        <div id="nav_main">
+          <div class="nav_search_bar">
+            <div class="nav_search_category_select">All</div>
+            <input type="text" id="nav_search_input" placeholder="iphone 13 pro max" />
+            <button class="nav_search_button">
+          </div>
+          <div class="nav_bar_options">
+            <div class="nav_sign_in" window.location.href="login.html">Sign In</div>
+            <div class="nav_favorites">Favorites<div class="favCounter">0</div></div>
+                    <div class="nav_cart">Cart <div class="cartCounter">0</div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div id="black_yellow_bar">
+      <div id="black_part"><i class="fas fa-bars"></i>Category</div>
+      <div id="verticalLine"></div>
+      <div id="yellow_part">NEW ARRIVALS</div>
+    </div>
+  </div>
+
+  <div class="whole_page">
+    <div class="favorite_container">
+      <div>
+        <div>
+          <p>Goods</p>
+          <div></div>
+        </div>
+        <hr>
+        <div>
+          <div>All</div>
+          <div>
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI8AAABiCAYAAABpuYDPAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo4RjlFOEYzM0VBRDUxMUU3QjA5QzhCNTZGOEJCQUYwNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo4RjlFOEYzNEVBRDUxMUU3QjA5QzhCNTZGOEJCQUYwNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjhGOUU4RjMxRUFENTExRTdCMDlDOEI1NkY4QkJBRjA2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjhGOUU4RjMyRUFENTExRTdCMDlDOEI1NkY4QkJBRjA2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+PP7oCQAADEtJREFUeNrsXQ2UVVUV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"
+              alt="">
+          </div>
+          <div>
+            <p>You currently don't have any favorites.</p>
+          </div>
+          <div>
+            <p>Add goods to your favorites by clicking <i class="far fa-heart"></i> the product page!</p>
+          </div>
+          <div class="box_container">
+            <!-- <div class="box">
+              <div><img
+                  src="https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Electronic/2021/01/06/goods_img-v1/20210106123007_5ff53ccf5f295.jpg"
+                  alt="">
+                <div><button><i class="fas fa-shopping-cart"></i></button><button><i class="fas fa-heart"></i></button>
+                </div>
+              </div>
+              <div>
+                <p>Lenovo PD1 TWS Earbuds Headphone Bluetooth 5.0 Stereo Bass Music Earphone Real Wireless Sports Games
+                  Noise-cancelling Headphones with HD Microphone - Light Pink</p>
+              </div>
+              <div>
+                <p>$20.16</p>
+              </div> -->
+          </div>
+
+
+        </div>
+      </div>
+
+
+
+
+    </div>
+  </div>
+  </div>
+
+  <div id="container_footer">
+    <div id="big">
+    <div id="middle">
+        <div id="mid1">
+            <div>
+                <img class="img_icons"src="https://css.gbtcdn.com/imagecache/gbw/img/site/new-logo.png" alt="logo">
+                <h5 class="footer_h5_title">AFFORDABLE QUALITY FUN SHOPPING</h5>
+            </div>
+            <div>
+                <img class="img_icons"style="width: 50px; height: 50px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAyCAMAAADGIxO9AAABAlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADg4OAAAAAAAAAAAAAAAAAAAAAAAADg4OAAAAAAAAAAAAAAAAAAAADg4OAAAADg4OAAAAAAAAAAAAAAAAAAAADk5OQAAAAAAADo6Oj///8AAADg4OAlJSUAAADg4OAaGhrg4ODg4ODg4OAAAADg4ODg4OAAAADh4eEAAADh4eHh4eHk5OQAAAAAAAAAAADg4OA4ODgeHh7Nzc0oKCgQEBAJCQnb29vExMSamppLS0sTExO/v7+zs7OoqKigoKB9fX1wcHBaWloYGBg9pae4AAAAQXRSTlMAgECHYZ94/h7swLwEAblL9/Hfx8e0r6eOfGNZVDcsE/TPe3drUkg8KSYZCwXt6+bm39nTu6ecmo2ETEc8MxMLCQmnFe4AAAFdSURBVEjH7ZTXbsIwFIbtAiUkJOxd9i50793/hLaU7vX+r1IzokCx1WukfBeRfXQ++eiPbObhsYRZXJPRvmVqcpBjqJVwCAq6SmcD2NL3bfsFA/EZ2vaPWOzocSCrdCygzg7ocYgR0QPu6AP3VOm1gVhYoWhBBMtXRE+ic+oI+5XyLA4UFI4PSLMTom98zRx6xiclWB0w1AlEehVxzmBEon182PvgjahTFgNoqgR2zTwtc8pSgE/qGABnCYmz3W8CIVORwCY7kjiJ/mRseQKWs87v0ZjDS6eQBVLyBJrutlOrnV+72y7EELIEgmd8QsutmgU+JQbkJAm4ZJxgS0m4xJdSiGGOoOUXV6CRxALlv06RcwPQxRhpzJOZVqqcR5iE9dmfKx1HHaM6afQDASZQO4KbCx7QdStXZIL/nUU8Z8UdP5DkMlLqR1GLQkmLKSgopQxTovm5jEaJeawOv0IPd8P/1V/7AAAAAElFTkSuQmCC" alt="">
+                <h4 class="footer_h4_title">High Quality Selection</h4>
+                <p class="p_footer">Total product quality control for peace of mind</p>
+            </div>
+            <div>
+                <img class="img_icons"style="width: 50px;height: 50px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAABIFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADi4uIAAAAAAAAAAAAAAAAAAAAAAADg4OAAAAAAAADh4eEAAAAAAADg4ODg4OAAAAAAAAAAAAAAAAAAAADg4OAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADi4uLf39/f399paWkAAADg4OAAAAAAAADg4OAAAAA7OzsAAADg4OCZmZng4OAUFBQAAAAAAADg4ODg4OAAAADa2toAAAAAAAAAAADk5OQAAADg4OBwcHDExMRPT0+lpaWVlZWLi4s4ODgxMTElJSUJCQkHBwfY2NjLy8u+vr6xsbFbW1s8PDwYGBgODg61tbWpqamDg4NtbW1paWlKSkpISEhFRUUimxvjAAAAQ3RSTlMAgPbwl1/8tqJxQC8fGATi0cTAZ1Q7EAr37uvf2dWrqZyGeXRqSjkxJx758O/o383Jx7Csp6SjjYyMeGpTT0Q0KRoTY8WDigAAAZ5JREFUSMft1NdOG0EUgOHj8a4LMe4loYYO6b33f1gTNwgESM/7v0V2BjsGYTPDHUj8N3u00qcj7YxWrrpUTYaVtXOB3FwKKFT9xWqSo5Z8RX4aVJA2bsKTLMN0LpZPYNaT3ISKxDUUfPAjJVi1Qxre+pECRLpcs+uyfkcCPa31rZokIOFF5uCvjisbsugB6gHwTZs2MvS7m/k4XoQK+KpttRL/U+E4sc5Q6HeKQWNONVvIShaKz3S/a8M7NwPFESSFkgQ81oM2jn3FJLw/TQBDNgciYs88bs+bbRkIXST6fcjhny9mvBGbBXjlIh3oQtPOZbul4iLbEHU50HaNyAysuchBPLVaW3a+LnVQ4iK/gM6utj2UFSg5yc4+sP3Zzs/N+5cOYvrRi439ZG8kDVUnabbbe4Bd80mSkHOSLuz0jsg9WYcpcW+BFhDF41MJ4ZGb7HYAfprxtQSw6CC2LZrf+zf6Pkz4EL0/OMjJFKmGmwybz6fhgZxB2psnu/NiduyfVqGkyugWZGRBMpB8kRFNLcsZ1ROnWlppyFUXv3/1lqnU6lgCKQAAAABJRU5ErkJggg==" alt="">
+                <h4 class="footer_h4_title">Affordable Price</h4>
+                <p class="p_footer">Factory direct prices for maximum savings</p>
+            </div>
+            <div>
+                <img class="img_icons"style="width: 50px; height: 50px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAA0lBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEAAAAAAAAAAAAAAAAAAAAtLS0AAAAAAAAAAAAAAAAAAAAAAADf398AAAAAAADg4OAAAAAAAADg4OAAAAAAAADg4ODf39/g4OArKysAAAAdHR0AAAAAAADi4uIAAADf398AAADm5uYAAAAAAADg4OD///9OTk5wcHDX19f+/v5qamr5+fmMjIwkJCQcHBwBAQHa2tpWVlZBQUEWFhbq6urBwcG5ubmnp6eWlpZSUlI4ODgqKiofnaNsAAAALXRSTlMA6vqngF3z8JhyPhMF5bagXtnAhGlEQDco6m78887KvKiioJ2UjFY0LxgYFAh5lWYlAAABTUlEQVRIx+2U126DQBBFFwwu2CbuJb33awhg4pJe/v+XwoiNsoJJBEiRXzgPPNyrsyM0sKKkpCDXtgYWzW7yRrONX2nzTgV/UGEVDRgLljHQZgsAvMFXxZWD3VmC6dFVXPV6Pfvs/DalzBgOqfqme5lFmaoK9GFS4Ygry7KGgz3aUGZFEC0bGGRWRqPRxQ1tqJJVoertHhFaHiUyiDwKYv51Cr1LboXYoLIK3Y/1S0qRGaeEjyDeV4piQmZJRQe8WQCJ+6P0lUwqjSpQbYgu8LBG9HgNF9TfSU7UDNBJqcWfTl0e5TvO3IUknXWVKc19EJ4T4UFFzXZMoTJsAEufan8JHG9FnBqGmhmDiUhQkyc+AzU+k9R1EHqdbkx37jhPn8qvxGWiihhNTCJ5EQS0G0uWXKZOEduQ9IWEz1Q6Gmheh894WqZhmC02KynIF2/ZrSepltS8AAAAAElFTkSuQmCC" alt="">
+                <h4 class="footer_h4_title">Express Shipping</h4>
+                <p class="p_footer">Fast, reliable delivery from global warehouse</p>
+            </div>
+            <div>
+                <img class="img_icons"style="width:50px; height: 50px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAA0lBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEAAAAAAAAAAAAAAAAAAAAtLS0AAAAAAAAAAAAAAAAAAAAAAADf398AAAAAAADg4OAAAAAAAADg4OAAAAAAAADg4ODf39/g4OArKysAAAAdHR0AAAAAAADi4uIAAADf398AAADm5uYAAAAAAADg4OD///9OTk5wcHDX19f+/v5qamr5+fmMjIwkJCQcHBwBAQHa2tpWVlZBQUEWFhbq6urBwcG5ubmnp6eWlpZSUlI4ODgqKiofnaNsAAAALXRSTlMA6vqngF3z8JhyPhMF5bagXtnAhGlEQDco6m78887KvKiioJ2UjFY0LxgYFAh5lWYlAAABTUlEQVRIx+2U126DQBBFFwwu2CbuJb33awhg4pJe/v+XwoiNsoJJBEiRXzgPPNyrsyM0sKKkpCDXtgYWzW7yRrONX2nzTgV/UGEVDRgLljHQZgsAvMFXxZWD3VmC6dFVXPV6Pfvs/DalzBgOqfqme5lFmaoK9GFS4Ygry7KGgz3aUGZFEC0bGGRWRqPRxQ1tqJJVoertHhFaHiUyiDwKYv51Cr1LboXYoLIK3Y/1S0qRGaeEjyDeV4piQmZJRQe8WQCJ+6P0lUwqjSpQbYgu8LBG9HgNF9TfSU7UDNBJqcWfTl0e5TvO3IUknXWVKc19EJ4T4UFFzXZMoTJsAEufan8JHG9FnBqGmhmDiUhQkyc+AzU+k9R1EHqdbkx37jhPn8qvxGWiihhNTCJ5EQS0G0uWXKZOEduQ9IWEz1Q6Gmheh894WqZhmC02KynIF2/ZrSepltS8AAAAAElFTkSuQmCC" alt="">
+                <h4 class="footer_h4_title">Worry-free After-sales</h4>
+                <p class="p_footer">Instant access to professional support</p>
+            </div>
+        </div>
+    </div>
+        <div id="middle2">
+            <div class="div1">
+              <div class="newsletter">
+                  <h4 style="color: gray;">Newsletter</h4>
+                  <input class="input_footer" type="text" name="E-mail" placeholder="Enter Email  to get 50 points">
+                  <button class="button_footer">Subscribe</button>
+              </div>
+            </div>
+            <div class="div2">
+                <img src="New Items big/social_icons.png" alt="">
+            </div>
+        </div>
+        <div id="bottom1">
+            <div class="list_footer">
+                <div id="info">
+                    <h3>Company Information</h3>
+                    <p style="margin-left: 15px;">About Us</p>
+                    <p style="margin-left: 15px;">Top Searches</p>
+                    <p style="margin-left: 15px;">Privacy Policy</p>
+                    <p style="margin-left: 15px;">Terms and Conditions</p>
+                    <p style="margin-left: 15px;">Intellectual Property Policy</p>
+                    <p style="margin-left: 15px;">Testimonials</p>
+                    <p style="margin-left: 15px;">Contact Us</p>
+                    <p style="margin-left: 15px;">Report Security Issue</p>
+                    <p style="margin-left: 15px;">Sell on Gearbest</p>
+                    <p style="margin-left: 15px;">Cookies Policy</p>
+                    <p style="margin-left: 15px;">Top Brands</p>
+                    <p style="margin-left: 15px;">Gearbest Official Blog</p>
+                </div>
+            </div>
+            <div class="list_footer">
+                <div id="service">
+                    <h3>Customer Service</h3>
+                    <p style="margin-left: 15px;">Shipping Information</p>
+                    <p style="margin-left: 15px;">My Favorites</p>
+                    <p style="margin-left: 15px;">My Favorites</p>
+                    <p style="margin-left: 15px;">FAQ For Newsletter Subscription</p>
+                    <p style="margin-left: 15px;">My Points</p>
+                    <p style="margin-left: 15px;">Warranty and Return</p>
+                    <p style="margin-left: 15px;">Payment Methods</p>
+                    <p style="margin-left: 15px;">Deposit Expansion</p>
+                    <p style="margin-left: 15px;">FAQ & Support</p>
+                    <p style="margin-left: 15px;">Sitemap</p>
+                    <p style="margin-left: 15px;">Gearbest Wallet Instruction</p>
+                    <p style="margin-left: 15px;">FAQs about COVID-19</p>
+                </div>
+            </div>
+            <div class="list_footer">
+                <div id="other">
+                    <h3>Other Business</h3>
+                    <p style="margin-left: 15px;">Partnership Programs</p>
+                    <p style="margin-left: 15px;">Associate Program</p>
+                </div>
+            </div>
+            <div class="list_footer">
+                <div id="download_app">
+                    <h3>Download App!</h3>
+                    <span>Save $3 with App & New Users Only</span> 
+                    <div class="qrscanner">
+                        <img src="New Items big\Gearbest_App_QRCODE.png" alt="" class="src">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="bottom2">
+            <img src="New Items big/partners.png" alt="" class="src">
+        </div>
+    </div>
+</div>
+<div id="border_base">
+    <h5>Copyright © 2014-2021 Gearbest.com. All Rights Reserved.</h5>
+</div>
+
+</body>
+
+</html>
+
+<script>
+
+  //linking the nav_bar
+  document.querySelector(".gearBestLogo").addEventListener('mouseover', function() {
+      event.target.style.cursor = "pointer";
+  })
+
+  document.querySelector(".gearBestLogo").addEventListener('click', function() {
+    window.location.href = "home_page.html"
+  })
+
+  document.querySelector(".nav_cart").addEventListener("click", function() {
+        window.location.href = "cart.html";
+    })
+
+    document.querySelector(".nav_sign_in").addEventListener("click", function() {
+        window.location.href = "login.html";
+    })
+
+    document.querySelector(".nav_favorites").addEventListener("click", function() {
+        window.location.href = "favorite.html";
+    })
+
+  //sign in check
+  var registeredUsers = JSON.parse(localStorage.getItem("userDataBase")) || [];
+
+  var [isSignedIn, indexOfUserSignedIn] = JSON.parse(localStorage.getItem("loggedInUser")) || [false, -1];
+  var signedInUserEmail = null;
+  var userCart = null;
+  var userFavorites = null;
+
+  if (isSignedIn) {
+    userFavorites = registeredUsers[indexOfUserSignedIn].userFavorites;
+    userCart = registeredUsers[indexOfUserSignedIn].userCart;
+    signedInUserEmail = registeredUsers[indexOfUserSignedIn].useremail;
+
+    userFavorites.map(display);
+
+    document.querySelector(".favorite_container>div>div:nth-child(3)>div:nth-child(2)>img ").src = "";
+
+    document.querySelector(".favorite_container>div>div:nth-child(3)>div:nth-child(3)>p ").textContent = "";
+
+    document.querySelector(".favorite_container>div>div:nth-child(3)>div:nth-child(4)>p").textContent = "";
+  }
+
+  if(isSignedIn) {
+        document.querySelector('.cartCounter').textContent = userCart.length;
+        document.querySelector('.favCounter').textContent = userFavorites.length;
+        document.querySelector(".nav_sign_in").textContent = signedInUserEmail;
+        document.querySelector(".nav_sign_in").style.overflow = "hidden";
+        document.querySelector(".nav_sign_in").style.marginLeft = "14px";
+        document.querySelector(".nav_sign_in").addEventListener("mouseover", function() {
+            let logoutBox = document.createElement('div');
+            logoutBox.setAttribute('class', "logOutDropDown");
+            if(document.querySelectorAll(".logOutDropDown").length > 0) {
+                return;
+            }
+
+            document.querySelector(".nav_sign_in").addEventListener("click", function() {
+                 location.reload();
+            })
+
+            logout_button = document.createElement("div");
+            logout_button.setAttribute("class", "logOutOption");
+            logout_button.textContent = "LOGOUT";
+
+            logout_button.addEventListener('click', function() {
+                localStorage.setItem("loggedInUser", JSON.stringify([false, -1]));
+                location.reload();
+            })
+
+            logoutBox.append(logout_button);
+            document.querySelector(".nav_sign_in").append(logoutBox);
+        })
+    }
+
+  function display(data, index) {
+    var div = document.createElement("div");
+    div.setAttribute("class", "box")
+
+    var div1 = document.createElement("div");
+    var img = document.createElement("img");
+    img.setAttribute("src", data.img);
+
+    var div2 = document.createElement("div");
+    div2.setAttribute("class", "button_holder");
+    var btn1 = document.createElement("button");
+    var f1 = document.createElement("i");
+    f1.setAttribute("class", "fas fa-shopping-cart");
+
+    btn1.append(f1);
+    btn1.addEventListener('click', function() {
+      
+            for(let i = 0; i < userCart.length; i++) {
+                if(userCart[i].img == data.img) {
+                    return alert("Item already added to cart!");
+                }
+            }
+            userCart.push(data);
+            registeredUsers[indexOfUserSignedIn].userCart = userCart;
+            localStorage.setItem("userDataBase", JSON.stringify(registeredUsers));
+            document.querySelector(".cartCounter").textContent = userCart.length;
+            alert("Item added to cart successfully");
+    })
+
+    var btn2 = document.createElement("button");
+    btn2.addEventListener("click", function() {
+      document.querySelector(".box_container").innerHTML = "";
+            userFavorites.splice(index, 1);
+            registeredUsers[indexOfUserSignedIn].userFavorites = userFavorites;
+            localStorage.setItem("userDataBase", JSON.stringify(registeredUsers));
+            document.querySelector(".favCounter").textContent = userFavorites.length;
+            return userFavorites.map(display);
+    })
+    var f2 = document.createElement("i");
+    f2.setAttribute("class", "far fa-trash-alt");
+
+    btn2.append(f2);
+
+    div2.append(btn1, btn2);
+
+    div1.append(img, div2);
+
+    var div3 = document.createElement("div");
+    var p1 = document.createElement("p");
+    p1.textContent = data.name;
+
+    div3.append(p1);
+
+    var div4 = document.createElement("div");
+    var p2 = document.createElement("p");
+    p2.textContent = "$" + data.price;
+
+    div4.append(p2);
+
+    div.append(div1, div3, div4);
+    document.querySelector(".box_container").append(div)
+
+
+  }
+</script>

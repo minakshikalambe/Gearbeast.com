@@ -1,6 +1,7 @@
 
 
 # Gearbest.com-clone
+![Logo](https://uidesign.gbtcdn.com/GB/images/promotion/2019/a_evan/Gearbest/logo_gearbest.png?imbypass=true)
 
 Gearbest.com where you will discover cutting edge products at affordable prices. Gearbest is specializing in mobile phones, consumer electronics, smart home, computer products, appliances, drones, and all kinds of cool gadgets, such as 3d printers, laser engravers, electronic scooters etc..
 <br>

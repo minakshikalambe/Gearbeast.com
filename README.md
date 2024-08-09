@@ -6,8 +6,6 @@
 Gearbest.com where you will discover cutting edge products at affordable prices. Gearbest is specializing in mobile phones, consumer electronics, smart home, computer products, appliances, drones, and all kinds of cool gadgets, such as 3d printers, laser engravers, electronic scooters etc..
 <br>
 
-I worked on this project during unit-2 construct week at Masai School with the help of other four team members.
-
 ## Tech stack used in this project
 
 Javascript, HTML, CSS .
